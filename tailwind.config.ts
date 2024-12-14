@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindCssAnimate from 'tailwindcss-animate'
 
 export default {
     darkMode: ["class"],
@@ -9,6 +10,15 @@ export default {
   ],
   theme: {
   	extend: {
+		keyframes: {
+			ditherAnimation: {
+			"0%": { backgroundPosition: "0 0" },
+			"100%": { backgroundPosition: "100% 100%" },
+			},
+		},
+		animation: {
+			ditherAnimation: "ditherAnimation 2s infinite linear",
+		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -58,5 +68,5 @@ export default {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindCssAnimate],
 } satisfies Config;
