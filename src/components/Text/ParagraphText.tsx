@@ -27,7 +27,9 @@ const ParagraphText = ({
   const sizeClass = paragraphSizes[size];
 
   return (
-    <div className={cn(`text-white dark:text-zinc-900 ${className}`)}>
+    <div
+      className={cn(`text-zinc-400 dark:text-zinc-900 font-light ${className}`)}
+    >
       <p className={sizeClass}>{text}</p>
     </div>
   );
