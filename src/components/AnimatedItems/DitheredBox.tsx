@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "@/lib/utils"; // Import cn utility if needed for conditional classes
+import { cn } from "@/lib/utils";
 
 interface DitheredBoxProps {
   className?: string;
@@ -16,11 +16,10 @@ const DitheredBox = ({
 }: DitheredBoxProps) => {
   return (
     <div
-      className={cn(`relative overflow-hidden`, className)}
+      className={cn(`relative overflow-hidden ${className}`)}
       style={{
         width,
         height,
-        animation: `ditherAnimation ${animationDuration} infinite linear`,
       }}
     >
       <div

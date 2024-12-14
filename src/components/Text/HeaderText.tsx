@@ -24,7 +24,7 @@ const HeaderText = ({
   const sizeClass = headerSizes[headerLevel];
 
   return (
-    <div className={cn(`text-white dark:text-zinc-900 ${className}`)}>
+    <div className={cn(`text-zinc-200 dark:text-zinc-900 ${className}`)}>
       <HeaderTag className={sizeClass}>{header}</HeaderTag>
     </div>
   );
