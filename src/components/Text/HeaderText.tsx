@@ -13,7 +13,7 @@ const HeaderText = ({
   headerLevel = "h1",
 }: HeaderTextProps) => {
   const headerSizes = {
-    h1: "text-5xl",
+    h1: "text-6xl",
     h2: "text-4xl",
     h3: "text-3xl",
     h4: "text-2xl",

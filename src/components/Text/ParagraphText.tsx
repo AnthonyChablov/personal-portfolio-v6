@@ -28,7 +28,7 @@ const ParagraphText = ({
 
   return (
     <div
-      className={cn(`text-zinc-400 dark:text-zinc-900 font-light ${className}`)}
+      className={cn(`text-zinc-300 dark:text-zinc-900 font-light ${className}`)}
     >
       <p className={sizeClass}>{text}</p>
     </div>
