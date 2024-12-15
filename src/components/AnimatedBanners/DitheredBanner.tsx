@@ -9,7 +9,7 @@ interface DitheredBoxProps {
   animationDuration?: string;
 }
 
-const DitheredBox = ({
+const DitheredBanner = ({
   className = "",
   width = "200px",
   height = "200px",
@@ -34,33 +34,6 @@ const DitheredBox = ({
           animation: `ditherAnimation ${animationDuration} infinite linear`,
         }}
       />
-
-      {/* Glitch Effect Layers */}
-      {/* <div
-        className="absolute top-0 left-0 w-full h-full border border-zinc-700 rounded-lg"
-        style={{
-          animation: `glitchBorder ${animationDuration} infinite alternate ease-in-out`,
-        }}
-      />
-      <div
-        className="absolute top-0 left-0 w-full h-full border border-zinc-600 rounded-lg opacity-50"
-        style={{
-          animation: `glitchShift ${animationDuration} infinite alternate-reverse`,
-        }}
-      /> */}
-
-      {/* Inner Content or Placeholder */}
-      {/* <div className="absolute inset-0 flex items-center justify-center">
-        <div
-          className="text-white font-bold text-lg"
-          style={{
-            animation: `textGlitch ${animationDuration} infinite linear`,
-          }}
-        >
-          Anthony Chablov
-        </div>
-      </div> */}
-
       {/* Keyframes */}
       <style jsx>{`
         @keyframes ditherAnimation {
@@ -106,4 +79,4 @@ const DitheredBox = ({
   );
 };
 
-export default DitheredBox;
+export default DitheredBanner;
