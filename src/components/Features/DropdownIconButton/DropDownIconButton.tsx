@@ -33,7 +33,10 @@ const DropDownIconButton = () => {
         >
           {selectedEmoji}
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="bg-zinc-900 text-zinc-200 border-zinc-700">
+        <DropdownMenuContent
+          className="bg-zinc-900 text-zinc-200 
+          border-zinc-700 h-96 overflow-y-none overflow-y-scroll"
+        >
           <>
             <div className="flex">
               <DropdownMenuLabel>
