@@ -12,12 +12,12 @@ interface DitheredBoxProps {
 const DitheredBanner = ({
   className = "",
   width = "200px",
-  height = "200px",
+  height = "225px",
   animationDuration = "2s",
 }: DitheredBoxProps) => {
   return (
     <div
-      className={cn(`relative overflow-hidden ${className}`)}
+      className={cn(`absolute z-20 overflow-hidden ${className}`)}
       style={{
         width,
         height,

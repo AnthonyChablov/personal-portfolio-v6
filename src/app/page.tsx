@@ -2,16 +2,19 @@ import Container from "@/components/Utils/Container";
 import HeaderText from "@/components/Text/HeaderText";
 import Separator from "@/components/Utils/Separator";
 import ParagraphText from "@/components/Text/ParagraphText";
-import DitheredBox from "@/components/AnimatedBanners/DitheredBanner";
+import DitheredBanner from "@/components/Banners/DitheredBanner";
+import IconSelectButton from "@/components/IconSelectButton/IconSelectButton";
 import { skills, interests, hobbies, contactLinks } from "./profileData";
 
 export default function Home() {
   return (
     <main className="h-full  bg-black ">
-      <DitheredBox width="100%" />
-      <Container>
+      <DitheredBanner width="100%" />
+      <Container className="">
         <section>
-          <Separator size="large" />
+          <Separator size="extraLarge" />
+          <IconSelectButton />
+          <Separator size="medium" />
           <div className=" flex  items-end ">
             <div className="">
               <HeaderText
