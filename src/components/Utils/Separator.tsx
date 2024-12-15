@@ -2,11 +2,22 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 interface SeparatorProps {
-  py?: string; // Optional vertical padding prop (e.g., "py-4", "py-8")
+  size?: "small" | "medium" | "large"; // Optional size prop
+  className?: string;
 }
 
-const Separator: React.FC<SeparatorProps> = ({ py = "py-2" }) => {
-  return <div className={cn(` ${py}`)}></div>;
+const Separator: React.FC<SeparatorProps> = ({
+  size = "small",
+  className = "",
+}) => {
+  // Map size to padding classes
+  const sizeClasses = {
+    small: "py-3",
+    medium: "py-5",
+    large: "py-9",
+  };
+
+  return <div className={cn(sizeClasses[size] + " " + className)}></div>;
 };
 
 export default Separator;
