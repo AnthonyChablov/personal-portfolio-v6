@@ -10,7 +10,7 @@ interface ParagraphTextProps {
 const ParagraphText = ({
   className = "",
   text = "",
-  size = "md",
+  size = "lg",
 }: ParagraphTextProps) => {
   const paragraphSizes = {
     sm: "text-sm",

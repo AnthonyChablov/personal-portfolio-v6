@@ -13,7 +13,7 @@ const Separator: React.FC<SeparatorProps> = ({
   // Map size to padding classes
   const sizeClasses = {
     small: "py-3",
-    medium: "py-5",
+    medium: "py-6",
     large: "py-9",
   };
 
