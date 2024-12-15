@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { EmojiItem } from "@/components/DropdownIconButton/emojiList";
+import { EmojiItem } from "@/components/DropdownIconButton/emojisList";
 
 export const useSelectEmoji = (
   initialEmojis: EmojiItem[],

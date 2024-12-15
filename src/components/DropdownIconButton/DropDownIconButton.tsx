@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,10 +10,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useSelectEmoji } from "@/hooks/useSelectEmoji";
 import ParagraphText from "../Text/ParagraphText";
-import { emojiList } from "./emojiList";
+import { emojiList } from "./emojisList";
 import { Input } from "@/components/ui/input";
 import { Button } from "../ui/button";
-import Container from "../Utils/Container";
 
 const DropDownIconButton = () => {
   const {
@@ -23,7 +22,6 @@ const DropDownIconButton = () => {
     setSearchTerm,
     selectRandomEmoji,
     filteredEmojis,
-    shuffleEmojis,
   } = useSelectEmoji(emojiList);
 
   return (
