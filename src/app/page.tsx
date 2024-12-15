@@ -116,11 +116,10 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-zinc-300 
-                    ease-in-out 
                     flex items-center space-x-4 
                     hover:text-zinc-50 
                     hover:underline
-                    transition-transform duration-300 transform hover:scale-110"
+                    ease-in-out transition-transform duration-300 transform hover:scale-110"
                 >
                   <span className="text-xl ">{link.icon}</span>
                   <ParagraphText text={link.text} />
