@@ -3,7 +3,7 @@ import HeaderText from "@/components/Text/HeaderText";
 import Separator from "@/components/Utils/Separator";
 import ParagraphText from "@/components/Text/ParagraphText";
 import DitheredBanner from "@/components/Banners/DitheredBanner";
-import IconSelectButton from "@/components/IconSelectButton/IconSelectButton";
+import DropDownIconButton from "@/components/DropdownIconButton/DropDownIconButton";
 import { skills, interests, hobbies, contactLinks } from "./profileData";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
       <Container className="">
         <section>
           <Separator size="extraLarge" />
-          <IconSelectButton />
+          <DropDownIconButton />
           <Separator size="medium" />
           <div className=" flex  items-end ">
             <div className="">
