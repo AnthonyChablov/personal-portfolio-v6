@@ -9,10 +9,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useSelectEmoji } from "@/hooks/useSelectEmoji";
-import ParagraphText from "../Text/ParagraphText";
+import ParagraphText from "../../Text/ParagraphText";
 import { emojiList } from "./emojisList";
 import { Input } from "@/components/ui/input";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 
 const DropDownIconButton = () => {
   const {
