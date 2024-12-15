@@ -10,7 +10,7 @@ export default function Home() {
     "React.js",
     "Express.js",
     "Node.js",
-    "Next.js + React Meta Frameworks",
+    "Next.js, Remix.js, React Meta-Frameworks",
     "Solidity, Hardhat, Foundry",
     "Tailwind",
     "CSS/SCSS",
@@ -19,10 +19,11 @@ export default function Home() {
 
   const interests = [
     "Full Stack Web Development",
+    "Decentralized & Distributed Systems",
     "System Design",
-    "Decentralized and Distributed Systems",
-    "User Interface Design",
+    "Software Architecture",
     "User Experience",
+    "User Interface Design",
   ];
   return (
     <main className="h-full  bg-zinc-900 py-36 ">
@@ -39,7 +40,7 @@ export default function Home() {
               <ParagraphText
                 size="3xl"
                 text="Full-stack developer"
-                className="font-semibold text-zinc-400"
+                className="font-light text-zinc-400"
               />
             </div>
           </div>
