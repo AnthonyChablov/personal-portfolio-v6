@@ -1,5 +1,10 @@
 "use client";
 import React from "react";
+import { useSelectEmoji } from "@/hooks/useSelectEmoji";
+import ParagraphText from "../../Text/ParagraphText";
+import { emojiList } from "./emojisList";
+import { Input } from "@/components/ui/input";
+import { Button } from "../../ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,11 +13,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useSelectEmoji } from "@/hooks/useSelectEmoji";
-import ParagraphText from "../../Text/ParagraphText";
-import { emojiList } from "./emojisList";
-import { Input } from "@/components/ui/input";
-import { Button } from "../../ui/button";
 
 const DropDownIconButton = () => {
   const {
@@ -27,12 +27,16 @@ const DropDownIconButton = () => {
   return (
     <div className="relative z-30">
       <DropdownMenu>
-        <DropdownMenuTrigger
-          className="rounded-2xl bg-transparent outline-none hover:bg-zinc-900/40
-      border-none text-7xl h-fit px-0 py-4 flex items-center 
-        justify-center transition-all duration-300"
-        >
-          {selectedEmoji}
+        <DropdownMenuTrigger>
+          <Button
+            className="rounded-2xl bg-transparent 
+            hover:bg-zinc-900/40 
+            hover:outline-zinc-400
+              border-none text-7xl h-fit px-0 py-4 flex items-center 
+              justify-center transition-all duration-300"
+          >
+            {selectedEmoji}
+          </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent
           className="bg-zinc-900 text-zinc-200 

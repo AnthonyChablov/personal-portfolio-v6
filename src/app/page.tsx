@@ -3,7 +3,7 @@ import HeaderText from "@/components/Text/HeaderText";
 import Separator from "@/components/Utils/Separator";
 import ParagraphText from "@/components/Text/ParagraphText";
 import DitheredBanner from "@/components/Banners/DitheredBanner";
-import DropDownIconButton from "@/components/Features/DropdownIconButton/DropDownIconButton";
+import DropDownIconButton from "@/components/Features/SelectIcon/DropDownIconButton";
 import { skills, interests, hobbies, contactLinks } from "./profileData";
 
 export default function Home() {
