@@ -1,25 +1,31 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
-interface DitheredBoxProps {
+interface GlitchTextBannerProps {
   animationDuration?: string;
 }
 
-const GlitchTextBanner = ({ animationDuration = "2s" }: DitheredBoxProps) => {
+const GlitchTextBanner = ({
+  animationDuration = "2s",
+}: GlitchTextBannerProps) => {
   // Extended array of banner texts
   const bannerTexts = [
-    "Welcome To My Portfolio Site",
     "Discovering Creative Ideas",
     "Designing Beyond Boundaries",
+    "Welcome To My Portfolio Site",
   ];
 
   // State to hold the random banner text
-  const [randomText, setRandomText] = useState<string | null>(null);
+  const [randomText, setRandomText] = useState<string | null>(
+    "Welcome To My Portfolio Site"
+  );
 
   // Set random text after component mounts
   useEffect(() => {
-    const text = bannerTexts[Math.floor(Math.random() * bannerTexts.length)];
-    setRandomText(text);
+    setInterval(() => {
+      const text = bannerTexts[Math.floor(Math.random() * bannerTexts.length)];
+      setRandomText(text);
+    }, 3000);
   }, [randomText]);
 
   // If randomText is not yet set (during the first render), return null to avoid hydration issues
