@@ -25,7 +25,7 @@ const SelectIcon = () => {
   } = useSelectEmoji(emojiList);
 
   return (
-    <div className="relative z-30 w-fit">
+    <div className="relative inset-0 z-50 w-fit">
       <DropdownMenu>
         <DropdownMenuTrigger
           className="

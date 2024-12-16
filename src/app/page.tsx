@@ -19,9 +19,21 @@ export default function Home() {
     }
 
     requestAnimationFrame(raf);
+    return () => {
+      lenis.destroy();
+    };
   }, []);
+
+  // Event handler to prevent Lenis smooth scrolling on specific elements
+  const preventSmoothScrollOnDropdown = (e: React.UIEvent) => {
+    const dropdown = e.target as HTMLElement;
+    if (dropdown.closest(".shadcn-dropdown")) {
+      // Manually trigger native scroll behavior for dropdown elements
+      dropdown.style.overflow = "auto";
+    }
+  };
   return (
-    <main className="h-full bg-black">
+    <main className="h-full bg-black" onWheel={preventSmoothScrollOnDropdown}>
       <SelectBanner />
       <Container className="">
         <section>
