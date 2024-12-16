@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { useSelectEmoji } from "@/hooks/useSelectEmoji";
+import { useSelectEmoji } from "@/components/Features/SelectIcon/hooks/useSelectEmoji";
 import ParagraphText from "../../Text/ParagraphText";
-import { emojiList } from "./data/emojisList";
+import { emojiList } from "./data/emojisListData";
 import { Input } from "@/components/ui/input";
 import { Button } from "../../ui/button";
 import {
@@ -30,7 +30,7 @@ const SelectIcon = () => {
         <DropdownMenuTrigger
           className="
             rounded-lg bg-transparent 
-          text-zinc-200 hover:bg-zinc-800 hover:text-zinc-300
+          text-zinc-200 hover:bg-zinc-900/40 hover:text-zinc-300
             border-none text-7xl  px-0 py-4 flex items-center 
             justify-center w-24 h-24 
             ease-in-out transition-all duration-300 transform hover:scale-110

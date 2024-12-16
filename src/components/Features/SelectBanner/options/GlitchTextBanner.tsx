@@ -5,7 +5,7 @@ interface DitheredBoxProps {
   animationDuration?: string;
 }
 
-const AnimatedBanner1 = ({ animationDuration = "2s" }: DitheredBoxProps) => {
+const GlitchTextBanner = ({ animationDuration = "2s" }: DitheredBoxProps) => {
   // Extended array of banner texts
   const bannerTexts = [
     "Welcome To My Portfolio Site",
@@ -77,4 +77,4 @@ const AnimatedBanner1 = ({ animationDuration = "2s" }: DitheredBoxProps) => {
   );
 };
 
-export default AnimatedBanner1;
+export default GlitchTextBanner;
