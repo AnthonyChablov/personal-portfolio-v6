@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import Container from "@/components/Layout/Container";
 import ParagraphText from "@/components/Text/ParagraphText";
 import { cn } from "@/lib/utils";
-import { bannerData } from "./_data/bannerData";
+import { bannerData } from "./data/bannerData";
 import {
   DropdownMenu,
   DropdownMenuContent,
