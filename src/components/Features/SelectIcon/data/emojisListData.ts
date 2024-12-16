@@ -5,7 +5,11 @@ export interface EmojiItem {
 }
 
 export const emojiList: EmojiItem[] = [
-  { id: 1, emoji: "👻", searchTerms: ["ghost", "spooky", "halloween"] },
+  {
+    id: 1,
+    emoji: "👻",
+    searchTerms: ["ghost", "spooky", "halloween", "Boo", "boo", "spooky"],
+  },
   { id: 2, emoji: "🚀", searchTerms: ["rocket", "space", "launch"] },
   { id: 3, emoji: "🌈", searchTerms: ["rainbow", "colors", "pride"] },
   { id: 4, emoji: "🍕", searchTerms: ["pizza", "food", "slice"] },
