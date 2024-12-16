@@ -42,7 +42,11 @@ export const emojiList: EmojiItem[] = [
   { id: 27, emoji: "🕸️", searchTerms: ["spiderweb", "creepy", "halloween"] },
   { id: 28, emoji: "🕯️", searchTerms: ["candle", "light", "spooky"] },
   { id: 29, emoji: "🪄", searchTerms: ["magic wand", "wizard", "spell"] },
-  { id: 30, emoji: "👀", searchTerms: ["eyes", "watch", "scary"] },
+  {
+    id: 30,
+    emoji: "👀",
+    searchTerms: ["eyes", "watch", "scary", "look", "looking"],
+  },
   { id: 31, emoji: "⚰️", searchTerms: ["coffin", "death", "halloween"] },
   { id: 32, emoji: "🦄", searchTerms: ["unicorn", "mythical", "magic"] },
 ];
