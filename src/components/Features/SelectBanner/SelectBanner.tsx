@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Banner from "./Banner/Banner";
+import Banner from "./Banner";
 import useIsHovered from "@/hooks/useIsHovered";
 import { Button } from "@/components/ui/button";
 import Container from "@/components/Layout/Container";
