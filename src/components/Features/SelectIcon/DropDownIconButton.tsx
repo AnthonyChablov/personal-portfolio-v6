@@ -29,12 +29,11 @@ const DropDownIconButton = () => {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
-            className="rounded-2xl bg-transparent 
-            hover:bg-zinc-900/40 
-            hover:outline-zinc-400
+            className="rounded-lg bg-transparent 
+            text-zinc-200 hover:bg-zinc-800 hover:text-zinc-300
               border-none text-7xl  px-0 py-4 flex items-center 
               justify-center transition-all duration-300
-                w-20 h-20
+                w-24 h-24
               "
           >
             {selectedEmoji}
@@ -64,7 +63,6 @@ const DropDownIconButton = () => {
               </div>
               {/* Shuffle Button */}
               <Button
-                variant="ghost"
                 onClick={selectRandomEmoji}
                 className="text-zinc-200 hover:bg-zinc-800 hover:text-zinc-300"
               >
