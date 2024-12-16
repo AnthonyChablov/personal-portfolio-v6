@@ -27,7 +27,7 @@ export default function Home() {
             </div>
           </div>
           <Separator />
-          <div className="space-y-3 text-justify ">
+          <div className="space-y-3 text-left md:text-justify ">
             <ParagraphText
               text="I'm a Full-Stack Developer with experience in building modern web applications. I specialize in using TypeScript, React, and Next.js for the frontend, ensuring dynamic and responsive user interfaces. "
               className=""
@@ -83,11 +83,11 @@ export default function Home() {
             headerLevel="h2"
           />
           <Separator />
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6">
             {hobbies.map((box) => (
               <div
                 key={box.title}
-                className="bg-zinc-800 p-6 text-white rounded shadow space-y-3"
+                className="bg-zinc-800 p-6 text-white rounded-lg space-y-3 shadow-md"
               >
                 <HeaderText
                   className="font-bold "

@@ -27,7 +27,7 @@ const DropDownIconButton = () => {
   return (
     <div className="relative z-30">
       <DropdownMenu>
-        <DropdownMenuTrigger>
+        <DropdownMenuTrigger asChild>
           <Button
             className="rounded-2xl bg-transparent 
             hover:bg-zinc-900/40 
