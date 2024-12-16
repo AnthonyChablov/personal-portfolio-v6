@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
-import { Button } from "../ui/button";
-import Container from "../Layout/Container";
-import ParagraphText from "../Text/ParagraphText";
+import { Button } from "../../../ui/button";
+import Container from "../../../Layout/Container";
+import ParagraphText from "../../../Text/ParagraphText";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -29,6 +29,12 @@ const Banner = ({
   children,
 }: BannerProps) => {
   const { isHovered, onMouseEnter, onMouseLeave } = useIsHovered();
+  const [isClicked, setIsClicked] = useState(false);
+
+  // Handle click event to toggle the clicked state
+  const handleClick = () => {
+    setIsClicked((prev) => !prev);
+  };
 
   return (
     <div
@@ -46,21 +52,26 @@ const Banner = ({
             <DropdownMenuTrigger asChild>
               <Button
                 className={cn(
-                  `hover:bg-zinc-800 hover:text-zinc-900 ${
-                    isHovered ? "inline-block" : "hidden"
-                  }`
+                  `hover:bg-zinc-800 hover:text-zinc-900 focus:visible  ${
+                    isHovered || isClicked ? "visible" : "invisible"
+                  } focus:visible`
                 )}
+                onClick={handleClick}
               >
-                <ParagraphText size="sm" text="Change cover"></ParagraphText>
+                <ParagraphText size="sm" text="Change cover" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuLabel>My Account</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>Profile</DropdownMenuItem>
-              <DropdownMenuItem>Billing</DropdownMenuItem>
-              <DropdownMenuItem>Team</DropdownMenuItem>
-              <DropdownMenuItem>Subscription</DropdownMenuItem>
+            <DropdownMenuContent
+              className="bg-zinc-900 text-zinc-200 
+              border-zinc-700 h-96 w-screen sm:w-96  
+                overflow-y-none overflow-y-scroll"
+            >
+              <DropdownMenuLabel>
+                <ParagraphText text="Select a Banner"></ParagraphText>
+              </DropdownMenuLabel>
+              <DropdownMenuSeparator className="bg-zinc-700" />
+
+              <DropdownMenuItem></DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         }

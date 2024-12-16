@@ -27,21 +27,21 @@ const DropDownIconButton = () => {
   return (
     <div className="relative z-30 w-fit">
       <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button
-            className="rounded-lg bg-transparent 
-            text-zinc-200 hover:bg-zinc-800 hover:text-zinc-300
-              border-none text-7xl  px-0 py-4 flex items-center 
-              justify-center transition-all duration-300
-                w-24 h-24
-              "
-          >
-            {selectedEmoji}
-          </Button>
+        <DropdownMenuTrigger
+          className="
+            rounded-lg bg-transparent 
+          text-zinc-200 hover:bg-zinc-800 hover:text-zinc-300
+            border-none text-7xl  px-0 py-4 flex items-center 
+            justify-center transition-all duration-300
+            w-24 h-24
+          "
+        >
+          {selectedEmoji}
         </DropdownMenuTrigger>
         <DropdownMenuContent
           className="bg-zinc-900 text-zinc-200 
-          border-zinc-700 h-96 w-screen sm:w-96  overflow-y-none overflow-y-scroll"
+          border-zinc-700 h-96 w-screen sm:w-96  
+            overflow-y-none overflow-y-scroll"
         >
           <>
             <div className="flex">
@@ -83,7 +83,7 @@ const DropDownIconButton = () => {
                 </svg>
               </Button>
             </div>
-            <div className="grid grid-cols-3 md:grid-cols-5 md:gap-2 p-2">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 md:gap-2 p-2">
               {filteredEmojis.map((emoji) => (
                 <DropdownMenuItem
                   key={emoji.id}

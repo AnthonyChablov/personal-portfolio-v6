@@ -2,17 +2,14 @@ import Container from "@/components/Layout/Container";
 import HeaderText from "@/components/Text/HeaderText";
 import Separator from "@/components/Layout/Separator";
 import ParagraphText from "@/components/Text/ParagraphText";
-import DitheredBanner from "@/components/Banners/AnimatedBanners/DitheredBanner";
 import DropDownIconButton from "@/components/Features/SelectIcon/DropDownIconButton";
 import { skills, interests, hobbies, contactLinks } from "./profileData";
-import Banner from "@/components/Banners/Banner";
+import SelectBanner from "@/components/Features/SelectBanner/SelectBanner";
 
 export default function Home() {
   return (
-    <main className="h-full  bg-black ">
-      <Banner width="100%">
-        <DitheredBanner />
-      </Banner>
+    <main className="h-full bg-black">
+      <SelectBanner />
       <Container className="">
         <section>
           <Separator size="extraLarge" />
