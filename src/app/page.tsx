@@ -1,3 +1,5 @@
+"use client";
+import { useEffect } from "react";
 import Container from "@/components/Layout/Container";
 import HeaderText from "@/components/Text/HeaderText";
 import Separator from "@/components/Layout/Separator";
@@ -5,8 +7,19 @@ import ParagraphText from "@/components/Text/ParagraphText";
 import { skills, interests, hobbies, contactLinks } from "./profileData";
 import SelectBanner from "@/components/Features/SelectBanner/SelectBanner";
 import SelectIcon from "@/components/Features/SelectIcon/SelectIcon";
+import Lenis from "lenis";
 
 export default function Home() {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
   return (
     <main className="h-full bg-black">
       <SelectBanner />

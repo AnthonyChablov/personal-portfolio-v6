@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { ReactLenis } from "@/lib/lenis";
+import Head from "next/head";
 
 const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetBrains-mono",
@@ -21,9 +23,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jetBrainsMono.className} antialiased`}>
-        {children}
-      </body>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/lenis@1.1.18/dist/lenis.css"
+        />
+      </Head>
+      <ReactLenis root>
+        <body className={`${jetBrainsMono.className} antialiased`}>
+          {children}
+        </body>
+      </ReactLenis>
     </html>
   );
 }
