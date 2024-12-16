@@ -7,6 +7,7 @@ import ParagraphText from "@/components/Text/ParagraphText";
 import { skills, interests, hobbies, contactLinks } from "./profileData";
 import SelectBanner from "@/components/Features/SelectBanner/SelectBanner";
 import SelectIcon from "@/components/Features/SelectIcon/SelectIcon";
+import Footer from "@/components/Layout/Footer";
 import Lenis from "lenis";
 
 export default function Home() {
@@ -158,6 +159,8 @@ export default function Home() {
           </ul>
         </section>
         <Separator size="large" />
+        <Footer />
+        <Separator size="small" />
       </Container>
     </main>
   );
