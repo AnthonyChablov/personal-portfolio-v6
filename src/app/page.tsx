@@ -2,7 +2,7 @@ import Container from "@/components/Utils/Container";
 import HeaderText from "@/components/Text/HeaderText";
 import Separator from "@/components/Utils/Separator";
 import ParagraphText from "@/components/Text/ParagraphText";
-import DitheredBanner from "@/components/Banners/DitheredBanner";
+import DitheredBanner from "@/components/Banners/AnimatedBanners/DitheredBanner";
 import DropDownIconButton from "@/components/Features/SelectIcon/DropDownIconButton";
 import { skills, interests, hobbies, contactLinks } from "./profileData";
 

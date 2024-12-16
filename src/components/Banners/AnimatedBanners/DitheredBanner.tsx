@@ -1,28 +1,13 @@
 "use client";
 import React from "react";
-import { cn } from "@/lib/utils";
 
 interface DitheredBoxProps {
-  className?: string;
-  width?: string;
-  height?: string;
   animationDuration?: string;
 }
 
-const DitheredBanner = ({
-  className = "",
-  width = "200px",
-  height = "225px",
-  animationDuration = "2s",
-}: DitheredBoxProps) => {
+const DitheredBanner = ({ animationDuration = "2s" }: DitheredBoxProps) => {
   return (
-    <div
-      className={cn(`absolute z-20 overflow-hidden ${className}`)}
-      style={{
-        width,
-        height,
-      }}
-    >
+    <>
       {/* Background Glitch Animation */}
       <div
         className="absolute top-0 left-0 w-full h-full"
@@ -75,7 +60,7 @@ const DitheredBanner = ({
           }
         }
       `}</style>
-    </div>
+    </>
   );
 };
 
