@@ -103,7 +103,7 @@ export const contactLinks = [
     ),
   },
   {
-    href: "mailto:anthonychablov@example.com",
+    href: "mailto:aechablov@gmail.com",
     text: "Email",
     icon: (
       <svg
