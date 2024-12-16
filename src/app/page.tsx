@@ -83,7 +83,7 @@ export default function Home() {
             headerLevel="h2"
           />
           <Separator />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {hobbies.map((box) => (
               <div
                 key={box.title}
