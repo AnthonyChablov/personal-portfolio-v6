@@ -110,7 +110,11 @@ export default function Home() {
           <Separator />
           <ul className="space-y-4 mt-4">
             {contactLinks.map((link, index) => (
-              <li key={index} className="flex items-center space-x-2 group">
+              <li
+                key={index}
+                className="flex items-center space-x-2 group 
+                  "
+              >
                 <a
                   href={link.href}
                   target="_blank"
@@ -119,7 +123,7 @@ export default function Home() {
                     flex items-center space-x-4 
                     hover:text-zinc-50 
                     hover:underline
-                    ease-in-out transition-transform duration-300 transform hover:scale-110"
+                   "
                 >
                   <span className="text-xl ">{link.icon}</span>
                   <ParagraphText text={link.text} />

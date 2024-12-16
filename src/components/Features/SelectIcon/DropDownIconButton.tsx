@@ -32,8 +32,8 @@ const DropDownIconButton = () => {
             rounded-lg bg-transparent 
           text-zinc-200 hover:bg-zinc-800 hover:text-zinc-300
             border-none text-7xl  px-0 py-4 flex items-center 
-            justify-center transition-all duration-300
-            w-24 h-24
+            justify-center w-24 h-24 
+            ease-in-out transition-all duration-300 transform hover:scale-110
           "
         >
           {selectedEmoji}
@@ -90,7 +90,8 @@ const DropDownIconButton = () => {
                   onClick={() => setSelectedEmoji(emoji.emoji)}
                   className="
                     text-3xl cursor-pointer hover:bg-zinc-800 
-                    flex items-center justify-center"
+                    flex items-center justify-center 
+                    ease-in-out transition-all duration-300 "
                 >
                   {emoji.emoji}
                 </DropdownMenuItem>

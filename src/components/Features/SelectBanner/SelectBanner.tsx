@@ -55,7 +55,8 @@ const SelectBanner = () => {
                 className={cn(
                   `hover:bg-zinc-800 hover:text-zinc-900 focus:visible  ${
                     isHovered || isClicked ? "visible" : "invisible"
-                  } focus:visible`
+                  } focus:visible 
+                  ease-in-out transition-all duration-300 transform hover:scale-110`
                 )}
                 onClick={handleClick}
               >
