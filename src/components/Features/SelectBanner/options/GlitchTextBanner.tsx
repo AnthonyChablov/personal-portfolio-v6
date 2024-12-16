@@ -20,7 +20,7 @@ const GlitchTextBanner = ({ animationDuration = "2s" }: DitheredBoxProps) => {
   useEffect(() => {
     const text = bannerTexts[Math.floor(Math.random() * bannerTexts.length)];
     setRandomText(text);
-  }, []);
+  }, [randomText]);
 
   // If randomText is not yet set (during the first render), return null to avoid hydration issues
   if (randomText === null) return null;
