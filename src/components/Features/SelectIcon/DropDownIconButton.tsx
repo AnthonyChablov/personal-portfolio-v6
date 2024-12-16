@@ -2,7 +2,7 @@
 import React from "react";
 import { useSelectEmoji } from "@/hooks/useSelectEmoji";
 import ParagraphText from "../../Text/ParagraphText";
-import { emojiList } from "./emojisList";
+import { emojiList } from "./_data/emojisList";
 import { Input } from "@/components/ui/input";
 import { Button } from "../../ui/button";
 import {

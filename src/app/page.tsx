@@ -5,11 +5,14 @@ import ParagraphText from "@/components/Text/ParagraphText";
 import DitheredBanner from "@/components/Banners/AnimatedBanners/DitheredBanner";
 import DropDownIconButton from "@/components/Features/SelectIcon/DropDownIconButton";
 import { skills, interests, hobbies, contactLinks } from "./profileData";
+import Banner from "@/components/Banners/Banner";
 
 export default function Home() {
   return (
     <main className="h-full  bg-black ">
-      <DitheredBanner width="100%" />
+      <Banner width="100%">
+        <DitheredBanner />
+      </Banner>
       <Container className="">
         <section>
           <Separator size="extraLarge" />
