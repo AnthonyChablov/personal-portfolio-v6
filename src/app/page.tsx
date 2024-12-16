@@ -87,14 +87,14 @@ export default function Home() {
             {hobbies.map((box) => (
               <div
                 key={box.title}
-                className="bg-zinc-800 p-6 text-white rounded-lg space-y-3 shadow-md"
+                className="bg-zinc-900 p-6 text-white rounded-lg space-y-2 shadow-md"
               >
                 <HeaderText
                   className="font-bold "
                   header={box.title}
                   headerLevel="h4"
                 />
-                <ParagraphText text={box.content} className="" />
+                <ParagraphText size="lg" text={box.content} className="" />
               </div>
             ))}
           </div>
