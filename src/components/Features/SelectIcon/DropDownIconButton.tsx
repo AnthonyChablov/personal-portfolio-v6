@@ -25,7 +25,7 @@ const DropDownIconButton = () => {
   } = useSelectEmoji(emojiList);
 
   return (
-    <div className="relative z-30">
+    <div className="relative z-30 w-fit">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button

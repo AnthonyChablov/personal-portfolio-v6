@@ -12,6 +12,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import useIsHovered from "@/hooks/useIsHovered";
 
 interface BannerProps {
   className?: string;
@@ -27,7 +28,8 @@ const Banner = ({
   height = "225px",
   children,
 }: BannerProps) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const { isHovered, onMouseEnter, onMouseLeave } = useIsHovered();
+
   return (
     <div
       className={cn(`absolute w-full z-20 overflow-hidden ${className}`)}
@@ -35,14 +37,20 @@ const Banner = ({
         width,
         height,
       }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <Container className="relative z-40 text-right top-5">
-        {isHovered && (
+        {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button className="hover:bg-zinc-800 hover:text-zinc-900">
+              <Button
+                className={cn(
+                  `hover:bg-zinc-800 hover:text-zinc-900 ${
+                    isHovered ? "inline-block" : "hidden"
+                  }`
+                )}
+              >
                 <ParagraphText size="sm" text="Change cover"></ParagraphText>
               </Button>
             </DropdownMenuTrigger>
@@ -55,7 +63,7 @@ const Banner = ({
               <DropdownMenuItem>Subscription</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-        )}
+        }
       </Container>
       {children}
     </div>
