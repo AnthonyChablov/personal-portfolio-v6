@@ -32,15 +32,17 @@ const DropDownIconButton = () => {
             className="rounded-2xl bg-transparent 
             hover:bg-zinc-900/40 
             hover:outline-zinc-400
-              border-none text-7xl h-fit px-0 py-4 flex items-center 
-              justify-center transition-all duration-300"
+              border-none text-7xl  px-0 py-4 flex items-center 
+              justify-center transition-all duration-300
+                w-20 h-20
+              "
           >
             {selectedEmoji}
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent
           className="bg-zinc-900 text-zinc-200 
-          border-zinc-700 h-96 overflow-y-none overflow-y-scroll"
+          border-zinc-700 h-96 w-screen sm:w-96  overflow-y-none overflow-y-scroll"
         >
           <>
             <div className="flex">
@@ -52,7 +54,7 @@ const DropDownIconButton = () => {
             {/*  */}
             <div className="flex space-x-4 py-4 px-4">
               {/* Input Button */}
-              <div className="flex   items-center justify-center w-full">
+              <div className="flex items-center justify-center w-full">
                 <Input
                   placeholder="Search emojis..."
                   value={searchTerm}
@@ -83,12 +85,14 @@ const DropDownIconButton = () => {
                 </svg>
               </Button>
             </div>
-            <div className="grid grid-cols-5 gap-2 p-2">
+            <div className="grid grid-cols-3 md:grid-cols-5 md:gap-2 p-2">
               {filteredEmojis.map((emoji) => (
                 <DropdownMenuItem
                   key={emoji.id}
                   onClick={() => setSelectedEmoji(emoji.emoji)}
-                  className="text-3xl cursor-pointer hover:bg-zinc-800 flex items-center justify-center"
+                  className="
+                    text-3xl cursor-pointer hover:bg-zinc-800 
+                    flex items-center justify-center"
                 >
                   {emoji.emoji}
                 </DropdownMenuItem>
