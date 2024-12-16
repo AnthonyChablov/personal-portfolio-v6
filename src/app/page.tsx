@@ -2,9 +2,9 @@ import Container from "@/components/Layout/Container";
 import HeaderText from "@/components/Text/HeaderText";
 import Separator from "@/components/Layout/Separator";
 import ParagraphText from "@/components/Text/ParagraphText";
-import DropDownIconButton from "@/components/Features/SelectIcon/DropDownIconButton";
 import { skills, interests, hobbies, contactLinks } from "./profileData";
 import SelectBanner from "@/components/Features/SelectBanner/SelectBanner";
+import SelectIcon from "@/components/Features/SelectIcon/SelectIcon";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <Container className="">
         <section>
           <Separator size="extraLarge" />
-          <DropDownIconButton />
+          <SelectIcon />
           <Separator size="medium" />
           <div className=" flex  items-end ">
             <div className="">
