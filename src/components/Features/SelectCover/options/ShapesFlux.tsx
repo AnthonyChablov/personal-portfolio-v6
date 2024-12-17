@@ -1,16 +1,18 @@
 "use client";
 import React from "react";
 
-const ShapeFlux = () => {
+const ShapesFlux = () => {
   return (
     <>
       {/* Background Animation Container */}
-      <div className="relative w-full h-screen overflow-hidden bg-black">
+      <div className="absolute top-0 left-0 w-full h-full">
         {/* Triangles and Shapes */}
-        <div className="shape triangle"></div>
-        <div className="shape square"></div>
-        <div className="shape circle"></div>
-        <div className="shape triangle-large"></div>
+        <div className=" ">
+          <div className=" shape triangle"></div>
+          <div className=" shape square"></div>
+          <div className="  shape circle"></div>
+          <div className=" shape triangle-large"></div>
+        </div>
       </div>
 
       {/* Animation Keyframes */}
@@ -110,4 +112,4 @@ const ShapeFlux = () => {
   );
 };
 
-export default ShapeFlux;
+export default ShapesFlux;

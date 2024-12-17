@@ -1,6 +1,7 @@
 import Dithered from "../options/Dithered";
 import GlitchText from "../options/GlitchText";
-import ShapeFlux from "../options/ShapesFlux";
+import ShapesFlux from "../options/ShapesFlux";
+import TrippyShapesFlux from "../options/TrippyShapesFlux";
 
 export interface Cover {
   id: string;
@@ -20,9 +21,14 @@ export const coverData: Cover[] = [
     component: <Dithered />,
   },
   {
-    id: "ShapeFlux",
-    name: "ShapeFlux",
-    component: <ShapeFlux />,
+    id: "ShapesFlux",
+    name: "ShapesFlux",
+    component: <ShapesFlux />,
+  },
+  {
+    id: "TrippyShapesFlux",
+    name: "TrippyShapesFlux",
+    component: <TrippyShapesFlux />,
   },
   // Add more banners here if needed
 ];

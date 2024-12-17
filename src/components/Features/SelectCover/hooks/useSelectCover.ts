@@ -1,10 +1,5 @@
-// useBannerSelect.ts
 import { useState } from "react";
-
-export interface Cover {
-  id: string;
-  name: string;
-}
+import { coverData } from "../data/coverData";
 
 export const useSelectCover = (defaultCoverId: string) => {
   const [selectedCoverId, setSelectedCoverId] =
@@ -14,5 +9,15 @@ export const useSelectCover = (defaultCoverId: string) => {
     setSelectedCoverId(coverId);
   };
 
-  return { selectedCoverId, handleSelectCover };
+  // Dynamically find the selected cover component based on the ID
+  const selectedCoverComponent = coverData.find(
+    (cover) => cover.id === selectedCoverId
+  )?.component;
+
+  return {
+    selectedCoverId,
+    selectedCoverComponent,
+    handleSelectCover,
+    coverData,
+  };
 };

@@ -3,11 +3,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import Container from "@/components/Layout/Container";
 import ParagraphText from "@/components/Text/ParagraphText";
-import GlitchText from "./options/GlitchText";
-import Dithered from "./options/Dithered";
-import ShapeFlux from "./options/ShapesFlux";
 import { cn } from "@/lib/utils";
-import { coverData } from "./data/coverData";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -19,20 +15,8 @@ import {
 import { useSelectCover } from "./hooks/useSelectCover";
 
 const SelectCover = () => {
-  const { selectedCoverId, handleSelectCover } = useSelectCover("Dithered");
-
-  const renderSelectedCover = () => {
-    switch (selectedCoverId) {
-      case "GlitchText":
-        return <GlitchText />;
-      case "Dithered":
-        return <Dithered />;
-      case "ShapeFlux":
-        return <ShapeFlux />;
-      default:
-        return <Dithered />;
-    }
-  };
+  const { selectedCoverComponent, handleSelectCover, coverData } =
+    useSelectCover("Dithered");
 
   return (
     <div
@@ -42,7 +26,7 @@ const SelectCover = () => {
         height: "225px",
       }}
     >
-      {renderSelectedCover()}
+      {selectedCoverComponent}
       <Container className="relative z-40 text-right top-5">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
