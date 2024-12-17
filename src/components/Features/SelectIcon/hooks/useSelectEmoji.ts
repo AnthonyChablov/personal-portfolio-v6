@@ -9,7 +9,6 @@ export const useSelectEmoji = (
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [emojis, setEmojis] = useState<EmojiItem[]>(initialEmojis);
 
-  // Shuffle emojis randomly
   const shuffleEmojis = () => {
     const shuffledEmojis = [...emojis].sort(() => Math.random() - 0.5);
     setEmojis(shuffledEmojis);
