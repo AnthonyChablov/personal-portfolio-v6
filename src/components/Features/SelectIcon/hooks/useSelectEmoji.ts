@@ -1,11 +1,17 @@
 import { useState, useMemo } from "react";
-import { EmojiItem } from "@/components/Features/SelectIcon/data/emojisListData";
+import { EmojiItem } from "../data/emojisListData";
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 
 export const useSelectEmoji = (
   initialEmojis: EmojiItem[],
   defaultEmoji = "👻"
 ) => {
-  const [selectedEmoji, setSelectedEmoji] = useState<string>(defaultEmoji);
+  // Use local storage to persist the selected emoji
+  const [selectedEmoji, setSelectedEmoji] = useLocalStorage<string>({
+    key: "selectedEmoji",
+    initialValue: defaultEmoji,
+  });
+
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [emojis, setEmojis] = useState<EmojiItem[]>(initialEmojis);
 
