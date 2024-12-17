@@ -13,6 +13,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 
 const SelectIcon = () => {
   const {
@@ -23,6 +24,12 @@ const SelectIcon = () => {
     selectRandomEmoji,
     filteredEmojis,
   } = useSelectEmoji(emojiList);
+
+  // Persist selected emoji to local storage
+  const [savedEmoji, setSavedEmoji] = useLocalStorage<string>({
+    key: "selectedEmoji",
+    initialValue: "👻",
+  });
 
   return (
     <div className="relative inset-0 z-50 w-fit">
