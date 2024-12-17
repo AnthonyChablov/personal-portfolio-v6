@@ -5,7 +5,7 @@ import HeaderText from "@/components/Text/HeaderText";
 import Separator from "@/components/Layout/Separator";
 import ParagraphText from "@/components/Text/ParagraphText";
 import { skills, interests, hobbies, contactLinks } from "./profileData";
-import SelectBanner from "@/components/Features/SelectBanner/SelectBanner";
+import SelectCover from "@/components/Features/SelectCover/SelectCover";
 import SelectIcon from "@/components/Features/SelectIcon/SelectIcon";
 import Footer from "@/components/Layout/Footer";
 import Lenis from "lenis";
@@ -35,7 +35,7 @@ export default function Home() {
   };
   return (
     <main className="h-full bg-black" onWheel={preventSmoothScrollOnDropdown}>
-      <SelectBanner />
+      <SelectCover />
       <Container className="">
         <section>
           <Separator size="extraLarge" />
