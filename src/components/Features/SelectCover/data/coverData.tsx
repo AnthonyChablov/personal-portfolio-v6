@@ -3,7 +3,6 @@ import GlitchText from "../options/GlitchText";
 import Shapes from "../options/Shapes";
 import Raindrops from "../options/Raindrops";
 import Lazers from "../options/Lazers";
-
 export interface CoverItem {
   id: string;
   name: string;

@@ -3,7 +3,8 @@ import React from "react";
 
 const Raindrops = () => {
   return (
-    <div className="absolute top-0 left-0 w-full h-full overflow-hidden bg-zinc-900">
+    <div className="absolute top-0 left-0 w-full h-full overflow-hidden bg-gradient-to-r from-zinc-900  to-black">
+      {" "}
       {/* Raindrops */}
       <div className="raindrop raindrop-1"></div>
       <div className="raindrop raindrop-2"></div>
