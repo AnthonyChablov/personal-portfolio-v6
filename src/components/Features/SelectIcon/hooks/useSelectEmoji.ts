@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { EmojiItem } from "@/components/Features/SelectIcon/data/emojisListData";
 
 // Utility function for filtering emojis
@@ -6,10 +6,10 @@ export const filterEmojis = (
   emojis: EmojiItem[],
   searchTerm: string
 ): EmojiItem[] => {
-  if (!searchTerm) return emojis;
-
+  if (!searchTerm) {
+    return emojis;
+  }
   const normalizedSearch = searchTerm.toLowerCase();
-
   return emojis.filter(
     ({ emoji, searchTerms }) =>
       emoji.toLowerCase().includes(normalizedSearch) ||
@@ -28,26 +28,12 @@ export const useEmojiSearch = (initialEmojis: EmojiItem[]) => {
     [emojis, searchTerm]
   );
 
-  // Reset emojis to original list
-  const resetEmojis = () => {
-    setEmojis(initialEmojis);
-    setSearchTerm("");
-  };
-
-  // Shuffle emojis
-  const shuffleEmojis = () => {
-    const shuffledEmojis = [...emojis].sort(() => Math.random() - 0.5);
-    setEmojis(shuffledEmojis);
-  };
-
   return {
     emojis,
     setEmojis,
     searchTerm,
     setSearchTerm,
     filteredEmojis,
-    resetEmojis,
-    shuffleEmojis,
   };
 };
 
@@ -56,21 +42,28 @@ export const useEmojiSelection = (
   initialEmojis: EmojiItem[],
   defaultEmoji = "👻"
 ) => {
-  // Use local storage to persist the selected emoji
-  const [selectedEmoji, setSelectedEmoji] = useState<string>(() => {
+  // Use state with a function to defer initialization
+  const [selectedEmoji, setSelectedEmoji] = useState<string>(defaultEmoji);
+  const [isLoading, setIsLoading] = useState<boolean>(true); // Loading state
+  // Effect to handle local storage after client-side mount
+  useEffect(() => {
     try {
       const savedEmoji = localStorage.getItem("selectedEmoji");
-      return savedEmoji || defaultEmoji;
-    } catch {
-      return defaultEmoji;
+      if (savedEmoji) {
+        setSelectedEmoji(savedEmoji);
+      }
+    } catch (error) {
+      console.error("Failed to read emoji from local storage", error);
+    } finally {
+      setIsLoading(false); // Stop loading after attempting to fetch emoji
     }
-  });
+  }, []);
 
   // Select random emoji
   const selectRandomEmoji = () => {
     const randomNumber = Math.floor(Math.random() * initialEmojis.length);
     const newEmoji = initialEmojis[randomNumber].emoji;
-    setSelectedEmoji(newEmoji);
+    updateSelectedEmoji(newEmoji);
   };
 
   // Update local storage when emoji changes
@@ -87,6 +80,7 @@ export const useEmojiSelection = (
     selectedEmoji,
     setSelectedEmoji: updateSelectedEmoji,
     selectRandomEmoji,
+    isLoading,
   };
 };
 

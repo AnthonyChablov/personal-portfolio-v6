@@ -3,13 +3,13 @@ import GlitchText from "../options/GlitchText";
 import Shapes from "../options/Shapes";
 import Lazers from "../options/Lazers";
 
-export interface Cover {
+export interface CoverItem {
   id: string;
   name: string;
   component: React.ReactNode;
 }
 
-export const coverData: Cover[] = [
+export const coverData: CoverItem[] = [
   {
     id: "GlitchText",
     name: "GlitchText",

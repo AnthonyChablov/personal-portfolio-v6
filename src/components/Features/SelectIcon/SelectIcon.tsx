@@ -13,6 +13,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import Loading from "@/components/ui/loading";
 
 const SelectIcon = () => {
   const {
@@ -22,6 +23,7 @@ const SelectIcon = () => {
     setSearchTerm,
     selectRandomEmoji,
     filteredEmojis,
+    isLoading,
   } = useSelectEmoji(emojiList);
 
   return (
@@ -36,7 +38,7 @@ const SelectIcon = () => {
             ease-in-out transition-all duration-300 transform hover:scale-110
           "
         >
-          {selectedEmoji}
+          {isLoading ? <Loading /> : selectedEmoji}
         </DropdownMenuTrigger>
         <DropdownMenuContent
           className="bg-zinc-900 text-zinc-200 
