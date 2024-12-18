@@ -10,6 +10,9 @@ const Raindrops = () => {
       <div className="raindrop raindrop-3"></div>
       <div className="raindrop raindrop-4"></div>
       <div className="raindrop raindrop-5"></div>
+      <div className="raindrop raindrop-6"></div>
+      <div className="raindrop raindrop-7"></div>
+      <div className="raindrop raindrop-8"></div>
 
       {/* Animation Keyframes */}
       <style jsx>{`
