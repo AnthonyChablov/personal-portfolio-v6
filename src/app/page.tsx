@@ -12,7 +12,10 @@ import Lenis from "lenis";
 
 export default function Home() {
   useEffect(() => {
-    const lenis = new Lenis();
+    const lenis = new Lenis({
+      wheelMultiplier: 1,
+      touchMultiplier: 1,
+    });
 
     function raf(time: number) {
       lenis.raf(time);
