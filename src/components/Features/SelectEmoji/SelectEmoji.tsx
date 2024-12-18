@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useSelectEmoji } from "@/components/Features/SelectIcon/hooks/useSelectEmoji";
+import { useSelectEmoji } from "@/components/Features/SelectEmoji/hooks/useSelectEmoji";
 import ParagraphText from "../../Text/ParagraphText";
 import { emojiList } from "./data/emojisListData";
 import { Input } from "@/components/ui/input";
@@ -48,7 +48,7 @@ const SelectIcon = () => {
           <>
             <div className="flex">
               <DropdownMenuLabel>
-                <ParagraphText text="Select an Icon"></ParagraphText>
+                <ParagraphText text="Select an Emoji"></ParagraphText>
               </DropdownMenuLabel>
             </div>
             <DropdownMenuSeparator className="bg-zinc-700" />

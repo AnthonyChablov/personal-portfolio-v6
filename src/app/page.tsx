@@ -6,7 +6,7 @@ import Separator from "@/components/Layout/Separator";
 import ParagraphText from "@/components/Text/ParagraphText";
 import { skills, interests, hobbies, contactLinks } from "./profileData";
 import SelectCover from "@/components/Features/SelectCover/SelectCover";
-import SelectIcon from "@/components/Features/SelectIcon/SelectIcon";
+import SelectIcon from "@/components/Features/SelectEmoji/SelectEmoji";
 import Footer from "@/components/Layout/Footer";
 import Lenis from "lenis";
 
