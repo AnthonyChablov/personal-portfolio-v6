@@ -21,8 +21,8 @@ export const coverData: CoverItem[] = [
     component: <Dithered />,
   },
   {
-    id: "ShapesFlux",
-    name: "ShapesFlux",
+    id: "Shapes",
+    name: "Shapes",
     component: <Shapes />,
   },
   {
