@@ -43,7 +43,7 @@ export const useEmojiSelection = (
 
   return {
     selectedEmoji,
-    setSelectedEmoji: updateSelectedEmoji,
+    updateSelectedEmoji,
     selectRandomEmoji,
     isLoading,
   };

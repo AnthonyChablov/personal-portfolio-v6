@@ -18,7 +18,7 @@ import Loading from "@/components/ui/loading";
 const SelectIcon = () => {
   const {
     selectedEmoji,
-    setSelectedEmoji,
+    updateSelectedEmoji,
     searchTerm,
     setSearchTerm,
     selectRandomEmoji,
@@ -89,7 +89,7 @@ const SelectIcon = () => {
               {filteredEmojis.map((emoji) => (
                 <DropdownMenuItem
                   key={emoji.id}
-                  onClick={() => setSelectedEmoji(emoji.emoji)}
+                  onClick={() => updateSelectedEmoji(emoji.emoji)}
                   className="
                     text-3xl cursor-pointer hover:bg-zinc-800 
                     flex items-center justify-center 
