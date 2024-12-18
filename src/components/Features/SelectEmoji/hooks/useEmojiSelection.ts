@@ -9,6 +9,7 @@ export const useEmojiSelection = (
   // Use state with a function to defer initialization
   const [selectedEmoji, setSelectedEmoji] = useState<string>(defaultEmoji);
   const [isLoading, setIsLoading] = useState<boolean>(true); // Loading state
+
   // Effect to handle local storage after client-side mount
   useEffect(() => {
     try {

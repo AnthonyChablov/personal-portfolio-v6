@@ -13,9 +13,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useSelectCover } from "./hooks/useSelectCover";
+import EmojiLoadingBanner from "./options/LoadingBanner";
 
 const SelectCover = () => {
-  const { selectedCoverComponent, handleSelectCover, coverData } =
+  const { selectedCoverComponent, handleSelectCover, coverData, isLoading } =
     useSelectCover("Dithered");
 
   return (
@@ -26,7 +27,7 @@ const SelectCover = () => {
         height: "225px",
       }}
     >
-      {selectedCoverComponent}
+      {isLoading ? <EmojiLoadingBanner /> : selectedCoverComponent}
       <Container className="relative z-40 text-right top-5">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -48,7 +49,6 @@ const SelectCover = () => {
               <ParagraphText text="Select a Cover" />
             </DropdownMenuLabel>
             <DropdownMenuSeparator className="bg-zinc-700" />
-
             {coverData.map((cover) => (
               <DropdownMenuItem
                 key={cover.id}
