@@ -13,14 +13,14 @@ export interface CoverItem {
 
 export const coverData: CoverItem[] = [
   {
-    id: "GlitchText",
-    name: "GlitchText",
-    component: <GlitchText />,
-  },
-  {
     id: "Dithered",
     name: "Dithered",
     component: <Dithered />,
+  },
+  {
+    id: "GlitchText",
+    name: "GlitchText",
+    component: <GlitchText />,
   },
   {
     id: "Shapes",
