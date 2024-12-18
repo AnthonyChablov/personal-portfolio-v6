@@ -30,7 +30,7 @@ export default function RootLayout({
         />
       </Head>
       <ReactLenis root>
-        <body className={`${jetBrainsMono.className} antialiased`}>
+        <body className={`${jetBrainsMono.className} bg-black antialiased`}>
           {children}
         </body>
       </ReactLenis>
