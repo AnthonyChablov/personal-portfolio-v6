@@ -17,7 +17,6 @@ const CoverTemplate: React.FC<TemplateProps> = ({ style, children }) => {
       >
         {children}
       </div>
-
       {/* Keyframes */}
       <style jsx>{``}</style>
     </>

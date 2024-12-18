@@ -3,13 +3,13 @@ import React from "react";
 
 const Raindrops = () => {
   return (
-    <div className="absolute top-0 left-0 w-full h-full overflow-hidden bg-gradient-to-r from-zinc-900  to-black">
+    <div className="absolute top-0 left-0 w-full h-full overflow-hidden bg-gradient-to-r from-black  to-black">
       {" "}
       {/* Raindrops */}
       <div className="raindrop raindrop-1"></div>
       <div className="raindrop raindrop-2"></div>
       <div className="raindrop raindrop-3"></div>
-      <div className="raindrop raindrop-4"></div>{" "}
+      <div className="raindrop raindrop-4"></div>
       <div className="raindrop raindrop-2"></div>
       <div className="raindrop raindrop-3"></div>
       <div className="raindrop raindrop-4"></div>
