@@ -3,6 +3,8 @@ import GlitchText from "../options/GlitchText";
 import Shapes from "../options/Shapes";
 import Raindrops from "../options/Raindrops";
 import Lazers from "../options/Lazers";
+import Ambient from "../options/Ambient";
+
 export interface CoverItem {
   id: string;
   name: string;
@@ -34,6 +36,11 @@ export const coverData: CoverItem[] = [
     id: "Raindrops",
     name: "Raindrops",
     component: <Raindrops />,
+  },
+  {
+    id: "Ambient",
+    name: "Ambient",
+    component: <Ambient />,
   },
 
   // Add more banners here if needed
