@@ -1,6 +1,7 @@
 import Dithered from "../options/Dithered";
 import GlitchText from "../options/GlitchText";
 import Shapes from "../options/Shapes";
+import Raindrops from "../options/Raindrops";
 import Lazers from "../options/Lazers";
 
 export interface CoverItem {
@@ -29,6 +30,11 @@ export const coverData: CoverItem[] = [
     id: "Lazers",
     name: "Lazers",
     component: <Lazers />,
+  },
+  {
+    id: "Raindrops",
+    name: "Raindrops",
+    component: <Raindrops />,
   },
   // Add more banners here if needed
 ];
