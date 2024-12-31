@@ -24,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
+        <meta name="apple-mobile-web-app-title" content="AnthonyC" />
         <link
           rel="stylesheet"
           href="https://unpkg.com/lenis@1.1.18/dist/lenis.css"
