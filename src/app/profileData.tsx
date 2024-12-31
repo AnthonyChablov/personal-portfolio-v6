@@ -2,13 +2,13 @@ export const skills = [
   "JavaScript, TypeScript",
   "Express.js, Node.js",
   "React.js, Next.js, Remix.js, React Meta-Frameworks",
-  "Tanstack, Tanstack Query (React Query)",
-  "Sanity, Payload, Content Management Systems (CMS)",
+  "Tanstack, Tanstack Query",
+  "Sanity, Payload, Content Management Systems",
   "Solidity, Hardhat, Foundry",
   "Leaflet.js, D3.js",
-  "Tailwind CSS, CSS/SCSS, ShadCN, MUI, ChakraUI, Bootstrap",
-  "Git, Github, Version Control",
-  "Test-Driven Development, Unit & E2E Testing",
+  "Tailwind CSS, CSS/SCSS, ShadCN, MUI, Bootstrap",
+  "Git, Github",
+  "Unit & E2E Testing, Test-Driven Development",
   "Vitest, Jest, React-Testing-Library, Playwright"
 ];
 
