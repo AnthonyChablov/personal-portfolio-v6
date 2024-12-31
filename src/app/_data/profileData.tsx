@@ -9,7 +9,7 @@ export const skills = [
   "Tailwind CSS, CSS/SCSS, ShadCN, MUI, Bootstrap",
   "Git, Github",
   "Unit & E2E Testing, Test-Driven Development",
-  "Vitest, Jest, React-Testing-Library, Playwright"
+  "Vitest, Jest, Playwright"
 ];
 
 

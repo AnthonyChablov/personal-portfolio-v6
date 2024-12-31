@@ -42,7 +42,7 @@ const SelectIcon = () => {
         </DropdownMenuTrigger>
         <DropdownMenuContent
           className="bg-zinc-900 text-zinc-200 
-          border-zinc-700 max-h-96 h-full w-screen sm:w-96  
+          border-zinc-700 h-48 w-screen sm:w-96  
             overflow-y-none overflow-y-scroll"
         >
           <>

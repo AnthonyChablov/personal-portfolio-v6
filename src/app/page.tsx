@@ -3,13 +3,13 @@ import Container from "@/components/Layout/Container";
 import HeaderText from "@/components/Text/HeaderText";
 import Separator from "@/components/Layout/Separator";
 import ParagraphText from "@/components/Text/ParagraphText";
-import { skills, interests, hobbies, contactLinks } from "./profileData";
+import { skills, interests, hobbies, contactLinks } from "./_data/profileData";
 import SelectCover from "@/components/Features/SelectCover/SelectCover";
 import SelectIcon from "@/components/Features/SelectEmoji/SelectEmoji";
 import Footer from "@/components/Layout/Footer";
 import useAsciiArt from "@/hooks/useAsciiArt";
 import useLenis from "@/hooks/useLenis";
-import { asciiArt } from "./asciiArt";
+import { asciiArt } from "./_data/asciiArt";
 
 export default function Home() {
   useAsciiArt(asciiArt);

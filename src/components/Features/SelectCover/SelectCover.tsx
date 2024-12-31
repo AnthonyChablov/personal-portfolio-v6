@@ -42,7 +42,7 @@ const SelectCover = () => {
           </DropdownMenuTrigger>
           <DropdownMenuContent
             className="bg-zinc-900 text-zinc-200 
-                border-zinc-700 max-h-96 h-full w-screen sm:w-96  
+                border-zinc-700 h-48 md:h-full overflow-y-auto w-screen sm:w-96  
                 "
           >
             <DropdownMenuLabel>
