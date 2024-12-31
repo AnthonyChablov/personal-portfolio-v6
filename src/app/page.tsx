@@ -1,5 +1,4 @@
 "use client";
-import { useEffect } from "react";
 import Container from "@/components/Layout/Container";
 import HeaderText from "@/components/Text/HeaderText";
 import Separator from "@/components/Layout/Separator";
@@ -8,26 +7,13 @@ import { skills, interests, hobbies, contactLinks } from "./profileData";
 import SelectCover from "@/components/Features/SelectCover/SelectCover";
 import SelectIcon from "@/components/Features/SelectEmoji/SelectEmoji";
 import Footer from "@/components/Layout/Footer";
-import Lenis from "lenis";
+import useAsciiArt from "@/hooks/useAsciiArt";
+import useLenis from "@/hooks/useLenis";
+import { asciiArt } from "./asciiArt";
 
 export default function Home() {
-  useEffect(() => {
-    const lenis = new Lenis({
-      wheelMultiplier: 1,
-      touchMultiplier: 1,
-    });
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
-
+  useAsciiArt(asciiArt);
+  useLenis()
   return (
     <main className="h-full bg-black">
       <SelectCover />
