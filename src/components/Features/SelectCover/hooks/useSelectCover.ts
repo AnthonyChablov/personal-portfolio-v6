@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { coverData } from "../data/coverData";
 
+export function selectCover(coverId: string) {
+  return coverData.find((cover) => cover.id === coverId)?.component;
+}
+
 export const useSelectCover = (defaultCoverId: string) => {
   const [selectedCoverId, setSelectedCoverId] =
     useState<string>(defaultCoverId);
@@ -30,9 +34,7 @@ export const useSelectCover = (defaultCoverId: string) => {
   };
 
   // Dynamically find the selected cover component based on the ID
-  const selectedCoverComponent = coverData.find(
-    (cover) => cover.id === selectedCoverId
-  )?.component;
+  const selectedCoverComponent = selectCover(selectedCoverId);
 
   return {
     isLoading,
