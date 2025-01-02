@@ -42,8 +42,8 @@ const SelectIcon = () => {
         </DropdownMenuTrigger>
         <DropdownMenuContent
           className="bg-zinc-900 text-zinc-200 
-          border-zinc-700 h-48 w-screen sm:w-96  
-            overflow-y-none overflow-y-scroll"
+          border-zinc-700 w-screen sm:w-96  
+            h-dvh max-h-64 overflow-y-auto pb-16"
         >
           <>
             <div className="flex">

@@ -29,7 +29,7 @@ const SelectCover = () => {
     >
       {isLoading ? <EmojiLoadingBanner /> : selectedCoverComponent}
       <Container className="relative z-40 text-right top-5">
-        <DropdownMenu>
+        <DropdownMenu >
           <DropdownMenuTrigger asChild>
             <Button
               className={cn(
@@ -42,13 +42,15 @@ const SelectCover = () => {
           </DropdownMenuTrigger>
           <DropdownMenuContent
             className="bg-zinc-900 text-zinc-200 
-                border-zinc-700 h-48 md:h-full overflow-y-auto w-screen sm:w-96  
-                "
+                border-zinc-700 w-screen sm:w-96 h-dvh max-h-64 overflow-y-auto pb-16"
           >
             <DropdownMenuLabel>
               <ParagraphText text="Select a Cover" />
             </DropdownMenuLabel>
             <DropdownMenuSeparator className="bg-zinc-700" />
+            <div className=" 
+                "
+            >
             {coverData.map((cover) => (
               <DropdownMenuItem
                 key={cover.id}
@@ -58,6 +60,7 @@ const SelectCover = () => {
                 <ParagraphText text={cover.name} />
               </DropdownMenuItem>
             ))}
+            </div>
           </DropdownMenuContent>
         </DropdownMenu>
       </Container>
