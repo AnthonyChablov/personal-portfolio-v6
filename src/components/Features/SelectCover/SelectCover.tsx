@@ -29,7 +29,7 @@ const SelectCover = () => {
     >
       {isLoading ? <EmojiLoadingBanner /> : selectedCoverComponent}
       <Container className="relative z-40 text-right top-5">
-        <DropdownMenu >
+        <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button
               className={cn(
@@ -48,18 +48,19 @@ const SelectCover = () => {
               <ParagraphText text="Select a Cover" />
             </DropdownMenuLabel>
             <DropdownMenuSeparator className="bg-zinc-700" />
-            <div className=" 
+            <div
+              className=" 
                 "
             >
-            {coverData.map((cover) => (
-              <DropdownMenuItem
-                key={cover.id}
-                onClick={() => handleSelectCover(cover.id)}
-                className="hover:cursor-pointer hover:text-zinc-800"
-              >
-                <ParagraphText text={cover.name} />
-              </DropdownMenuItem>
-            ))}
+              {coverData.map((cover) => (
+                <DropdownMenuItem
+                  key={cover.id}
+                  onClick={() => handleSelectCover(cover.id)}
+                  className="hover:cursor-pointer hover:text-zinc-800"
+                >
+                  <ParagraphText text={cover.name} />
+                </DropdownMenuItem>
+              ))}
             </div>
           </DropdownMenuContent>
         </DropdownMenu>
