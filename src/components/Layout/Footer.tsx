@@ -8,7 +8,7 @@ const Footer = () => {
       <div className=" text-center">
         <ParagraphText
           size="sm"
-          text={`© ${currentYear} Created and built with ❤️ by Anthony Chablov`}
+          text={`© ${currentYear} Created and built by Anthony Chablov`}
         />
       </div>
     </footer>
