@@ -7,9 +7,9 @@ import { skills, interests, hobbies, contactLinks } from "./_data/profileData";
 import SelectCover from "@/components/Features/SelectCover/SelectCover";
 import SelectIcon from "@/components/Features/SelectEmoji/SelectEmoji";
 import Footer from "@/components/Layout/Footer";
-import useAsciiArt from "@/hooks/useAsciiArt";
+import useAsciiArt from "@/hooks/useAsciiArt/useAsciiArt";
 import useLenis from "@/hooks/useLenis";
-import { asciiArt } from "./_data/asciiArt";
+import { asciiArt } from "../hooks/useAsciiArt/data/asciiArt";
 
 export default function Home() {
   useAsciiArt(asciiArt);
