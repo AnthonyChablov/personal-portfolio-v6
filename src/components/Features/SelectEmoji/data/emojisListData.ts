@@ -5,11 +5,7 @@ export interface EmojiItem {
 }
 
 export const emojiList: EmojiItem[] = [
-  {
-    id: 1,
-    emoji: "👻",
-    searchTerms: ["ghost", "spooky", "halloween", "Boo", "boo", "spooky"],
-  },
+  { id: 27, emoji: "🕸️", searchTerms: ["spiderweb", "creepy", "halloween"] },
   { id: 2, emoji: "🚀", searchTerms: ["rocket", "space", "launch"] },
   { id: 3, emoji: "🌈", searchTerms: ["rainbow", "colors", "pride"] },
   { id: 4, emoji: "🍕", searchTerms: ["pizza", "food", "slice"] },
@@ -20,7 +16,11 @@ export const emojiList: EmojiItem[] = [
   { id: 9, emoji: "🤖", searchTerms: ["robot", "ai", "technology"] },
   { id: 10, emoji: "🍦", searchTerms: ["ice cream", "dessert", "sweet"] },
   { id: 11, emoji: "🏀", searchTerms: ["basketball", "sport", "ball"] },
-  { id: 12, emoji: "🚲", searchTerms: ["bicycle", "bike", "cycle"] },
+  { id: 12, emoji: "🚲", searchTerms: ["bicycle", "bike", "cycle"] },{
+    id: 1,
+    emoji: "👻",
+    searchTerms: ["ghost", "spooky", "halloween", "Boo", "boo", "spooky"],
+  },
   { id: 13, emoji: "🌍", searchTerms: ["earth", "globe", "world"] },
   { id: 14, emoji: "🎸", searchTerms: ["guitar", "music", "instrument"] },
   { id: 15, emoji: "🍩", searchTerms: ["donut", "dessert", "sweet"] },
@@ -39,7 +39,6 @@ export const emojiList: EmojiItem[] = [
   { id: 24, emoji: "🔮", searchTerms: ["crystal ball", "fortune", "magic"] },
   { id: 25, emoji: "🧟", searchTerms: ["zombie", "undead", "halloween"] },
   { id: 26, emoji: "🦸", searchTerms: ["superhero", "hero", "power"] },
-  { id: 27, emoji: "🕸️", searchTerms: ["spiderweb", "creepy", "halloween"] },
   { id: 28, emoji: "🕯️", searchTerms: ["candle", "light", "spooky"] },
   { id: 29, emoji: "🪄", searchTerms: ["magic wand", "wizard", "spell"] },
   {
