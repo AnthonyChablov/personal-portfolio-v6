@@ -1,5 +1,5 @@
 export const skills = [
-  "JavaScript, TypeScript",
+  "JavaScript, TypeScript, Python",
   "Express.js, Node.js",
   "React.js, Next.js, Remix.js, React Meta-Frameworks",
   "Tanstack, Tanstack Query",
@@ -7,7 +7,7 @@ export const skills = [
   "Solidity, Hardhat, Foundry",
   "Leaflet.js, D3.js",
   "Tailwind CSS, CSS/SCSS, ShadCN, MUI, Bootstrap",
-  "Git, Github",
+  "Git, Github, Version Control",
   "Unit & E2E Testing, Test-Driven Development",
   "Vitest, Jest, Playwright"
 ];
