@@ -2,7 +2,7 @@ export const skills = [
   "JavaScript, TypeScript, Python",
   "Express.js, Node.js",
   "React.js, Next.js, Remix.js, React Meta-Frameworks",
-  "Tanstack, Tanstack Query",
+  "Tanstack, Tanstack Query, SWR",
   "Sanity, Payload, Content Management Systems",
   "Solidity, Hardhat, Foundry",
   "Leaflet.js, D3.js",
