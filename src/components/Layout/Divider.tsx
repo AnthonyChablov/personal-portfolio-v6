@@ -11,10 +11,10 @@ interface DividerProps {
 
 const Divider = ({
   className = "",
-  borderColor = "border-zinc-800", // Default to a gray color if not specified
+  borderColor = "border-zinc-700", // Default to a gray color if not specified
   borderWidth = "border-t", // Default to a top border
   borderStyle = "solid", // Default to solid border
-  margin = "my-8", // Default padding
+  margin = "my-0", // Default padding
 }: DividerProps) => {
   return (
     <div

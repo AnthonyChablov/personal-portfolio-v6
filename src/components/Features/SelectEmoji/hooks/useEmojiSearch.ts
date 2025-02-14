@@ -1,22 +1,6 @@
 import { useState, useMemo } from "react";
 import { EmojiItem } from "@/components/Features/SelectEmoji/data/emojisListData";
 
-// Utility function for filtering emojis
-export const filterEmojis = (
-  emojis: EmojiItem[],
-  searchTerm: string
-): EmojiItem[] => {
-  if (!searchTerm) {
-    return emojis;
-  }
-  const normalizedSearch = searchTerm.toLowerCase();
-  return emojis.filter(
-    ({ emoji, searchTerms }) =>
-      emoji.toLowerCase().includes(normalizedSearch) ||
-      searchTerms.some((term) => term.toLowerCase().includes(normalizedSearch))
-  );
-};
-
 // Hook for managing emoji search
 export const useEmojiSearch = (initialEmojis: EmojiItem[]) => {
   const [emojis, setEmojis] = useState<EmojiItem[]>(initialEmojis);
@@ -35,4 +19,21 @@ export const useEmojiSearch = (initialEmojis: EmojiItem[]) => {
     setSearchTerm,
     filteredEmojis,
   };
+};
+
+
+// Utility function for filtering emojis
+export const filterEmojis = (
+  emojis: EmojiItem[],
+  searchTerm: string
+): EmojiItem[] => {
+  if (!searchTerm) {
+    return emojis;
+  }
+  const normalizedSearch = searchTerm.toLowerCase();
+  return emojis.filter(
+    ({ emoji, searchTerms }) =>
+      emoji.toLowerCase().includes(normalizedSearch) ||
+      searchTerms.some((term) => term.toLowerCase().includes(normalizedSearch))
+  );
 };

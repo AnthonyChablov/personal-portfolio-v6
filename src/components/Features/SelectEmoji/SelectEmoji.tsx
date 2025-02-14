@@ -30,11 +30,11 @@ const SelectIcon = () => {
     <div className="relative inset-0 z-50 w-fit">
       <DropdownMenu>
         <DropdownMenuTrigger
-          className="
+          className=" 
             rounded-lg bg-transparent 
           text-zinc-200 hover:bg-zinc-900/40 hover:text-zinc-300
-            border-none text-7xl  px-0 py-4 flex items-center 
-            justify-center w-24 h-24 
+            border-none text-7xl  px-0 py-4 flex flex-col items-center 
+            justify-center w-28 h-fit
             ease-in-out transition-all duration-300 transform hover:scale-110
           "
         >
@@ -42,8 +42,7 @@ const SelectIcon = () => {
         </DropdownMenuTrigger>
         <DropdownMenuContent
           className="bg-zinc-900 text-zinc-200 
-          border-zinc-700 w-screen sm:w-96  
-            h-dvh max-h-64 overflow-y-auto pb-16"
+          border-zinc-700 w-screen sm:w-96"
         >
           <>
             <div className="flex">
@@ -52,7 +51,6 @@ const SelectIcon = () => {
               </DropdownMenuLabel>
             </div>
             <DropdownMenuSeparator className="bg-zinc-700" />
-
             <div className="flex space-x-4 py-4 px-4">
               {/* Input Button */}
               <div className="flex items-center justify-center w-full">
@@ -85,14 +83,17 @@ const SelectIcon = () => {
                 </svg>
               </Button>
             </div>
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 md:gap-2 p-2">
+            <div
+              className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 
+                md:gap-2 p-2 hm max-h-64 overflow-y-auto"
+            >
               {filteredEmojis.map((emoji) => (
                 <DropdownMenuItem
                   key={emoji.id}
                   onClick={() => updateSelectedEmoji(emoji.emoji)}
                   className="
                     text-3xl cursor-pointer hover:bg-zinc-800 
-                    flex items-center justify-center 
+                    flex items-center justify-center h-fit
                     ease-in-out transition-all duration-300 "
                 >
                   {emoji.emoji}

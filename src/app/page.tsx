@@ -13,7 +13,7 @@ import { asciiArt } from "../hooks/useAsciiArt/data/asciiArt";
 
 export default function Home() {
   useAsciiArt(asciiArt);
-  useLenis()
+  useLenis();
   return (
     <main className="h-full bg-black">
       <SelectCover />
@@ -30,13 +30,13 @@ export default function Home() {
                 headerLevel="h1"
               />
               <Separator />
-              <ParagraphText size="xl" text="Full-stack developer" />
+              <ParagraphText size="xl" text="Full Stack Developer" />
             </div>
           </div>
           <Separator />
           <div className="space-y-3 text-left md:text-justify ">
             <ParagraphText
-              text="I'm a Full-Stack Developer with experience in building modern web applications. I specialize in using TypeScript, React, and Next.js for the frontend, ensuring dynamic and responsive user interfaces. "
+              text="I'm a Full Stack Developer with experience in building modern web applications. I specialize in using TypeScript, React, and Next.js for the frontend, ensuring dynamic and responsive user interfaces. "
               className=""
             />
             <ParagraphText
