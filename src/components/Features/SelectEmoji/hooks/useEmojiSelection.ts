@@ -4,7 +4,7 @@ import { EmojiItem } from "@/components/Features/SelectEmoji/data/emojisListData
 // Hook for managing emoji selection with local storage
 export const useEmojiSelection = (
   initialEmojis: EmojiItem[],
-  defaultEmoji = "🕸️"
+  defaultEmoji = "🌍"
 ) => {
   // Use state with a function to defer initialization
   const [selectedEmoji, setSelectedEmoji] = useState<string>(defaultEmoji);
