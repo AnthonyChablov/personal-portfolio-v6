@@ -21,14 +21,15 @@ A fully-responsive and interactive portfolio website built with modern technolog
 
 ## 📂 Project Structure
 
+```
 /src
   /app         # Application-specific pages and routing (Next.js App Router)
   /components  # Reusable UI components
   /hooks       # Custom React hooks
   /lib         # ShadCN-related libraries, configurations and util functions
-    /lenis.ts  # Config for lenis smooth scroll
-    /utils.ts  # Utility functions
-  /public      # Static assets
+  /lenis.ts    # Config for lenis smooth scroll
+  /utils.ts    # Utility functions
+/public        # Static assets
 ```
 
 ## 🚀 Getting Started
@@ -43,21 +44,28 @@ Make sure you have the following installed:
 ### Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/your-portfolio.git
-   ```
+
+```bash
+git clone https://github.com/your-username/your-portfolio.git
+```
+
 2. Navigate to the project directory:
-   ```bash
-   cd your-portfolio
-   ```
+
+```bash
+cd your-portfolio
+```
+
 3. Install dependencies:
-   ```bash
-   npm install
-   ```
-   or
-   ```bash
-   yarn install
-   ```
+
+```bash
+npm install
+```
+
+or
+
+```bash
+yarn install
+```
 
 ### Running the Development Server
 
@@ -66,7 +74,9 @@ Start the development server:
 ```bash
 npm run dev
 ```
+
 or
+
 ```bash
 yarn dev
 ```
@@ -80,14 +90,16 @@ To create an optimized production build:
 ```bash
 npm run build
 ```
+
 or
+
 ```bash
 yarn build
 ```
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!  
+Contributions, issues, and feature requests are welcome!
 Feel free to check the [issues page](https://github.com/AnthonyChablov/personal-portfolio-v6/issues).
 
 ## 📄 License
