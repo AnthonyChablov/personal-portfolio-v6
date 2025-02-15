@@ -6,10 +6,7 @@ interface SeparatorProps {
   className?: string;
 }
 
-const Separator: React.FC<SeparatorProps> = ({
-  size = "small",
-  className = "",
-}) => {
+const Separator = ({ size = "small", className = "" }: SeparatorProps) => {
   // Map size to padding classes
   const sizeClasses = {
     extraSmall: "py-1",
@@ -19,7 +16,13 @@ const Separator: React.FC<SeparatorProps> = ({
     extraLarge: "py-20",
   };
 
-  return <div className={cn(sizeClasses[size] + "" + className)}></div>;
+  return (
+    <div
+      role="separator"
+      id={`${size}-separator`}
+      className={cn(sizeClasses[size] + " " + className)}
+    ></div>
+  );
 };
 
 export default Separator;
