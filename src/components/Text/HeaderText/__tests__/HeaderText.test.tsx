@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import HeaderText from "../HeaderText/HeaderText";
+import HeaderText from "../HeaderText";
 import { describe, it, expect } from "vitest";
 
 describe("HeaderText.tsx", () => {
