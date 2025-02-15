@@ -1,12 +1,12 @@
 "use client";
 import Container from "@/components/Layout/Container/Container";
 import HeaderText from "@/components/Text/HeaderText/HeaderText";
-import Separator from "@/components/Layout/Separator";
+import Separator from "@/components/Layout/Separator/Separator";
 import ParagraphText from "@/components/Text/ParagraphText/ParagraphText";
 import { skills, interests, hobbies, contactLinks } from "./_data/profileData";
 import SelectCover from "@/components/Features/SelectCover/SelectCover";
 import SelectIcon from "@/components/Features/SelectEmoji/SelectEmoji";
-import Footer from "@/components/Layout/Footer";
+import Footer from "@/components/Layout/Footer/Footer";
 import useAsciiArt from "@/hooks/useAsciiArt/useAsciiArt";
 import useLenis from "@/hooks/useLenis";
 import { asciiArt } from "../hooks/useAsciiArt/data/asciiArt";
