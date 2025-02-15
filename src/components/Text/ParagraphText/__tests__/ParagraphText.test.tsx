@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
-import ParagraphText from "../ParagraphText";
+import ParagraphText from "../../ParagraphText/ParagraphText";
 
 describe("ParagraphText.tsx", () => {
   it("should render in the DOM with the correct paragraph text", () => {
