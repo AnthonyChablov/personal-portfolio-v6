@@ -1,5 +1,5 @@
 "use client";
-import Container from "@/components/Layout/Container";
+import Container from "@/components/Layout/Container/Container";
 import HeaderText from "@/components/Text/HeaderText/HeaderText";
 import Separator from "@/components/Layout/Separator";
 import ParagraphText from "@/components/Text/ParagraphText/ParagraphText";
