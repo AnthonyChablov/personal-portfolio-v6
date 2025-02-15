@@ -14,7 +14,7 @@ const ParagraphText = ({
 }: ParagraphTextProps) => {
   const paragraphSizes = {
     sm: "text-sm",
-    md: "text-base",
+    md: "text-md",
     lg: "text-lg",
     xl: "text-xl",
     "2xl": "text-2xl",
@@ -27,11 +27,12 @@ const ParagraphText = ({
   const sizeClass = paragraphSizes[size];
 
   return (
-    <div
+    <span
+      role="paragraph-text"
       className={cn(`text-zinc-300 dark:text-zinc-900 font-light ${className}`)}
     >
       <p className={sizeClass}>{text}</p>
-    </div>
+    </span>
   );
 };
 
