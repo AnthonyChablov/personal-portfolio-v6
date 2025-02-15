@@ -1,5 +1,5 @@
 import React from "react";
-import ParagraphText from "../Text/ParagraphText/ParagraphText";
+import ParagraphText from "@/components/Text/ParagraphText/ParagraphText";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
