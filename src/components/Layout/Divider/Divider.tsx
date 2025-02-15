@@ -18,6 +18,7 @@ const Divider = ({
 }: DividerProps) => {
   return (
     <div
+      role="divider"
       className={cn(
         ` border-${borderStyle} ${borderWidth} ${borderColor} ${margin} ${className}`
       )}
