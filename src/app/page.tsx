@@ -8,7 +8,7 @@ import SelectCover from "@/components/Features/SelectCover/SelectCover";
 import SelectIcon from "@/components/Features/SelectEmoji/SelectEmoji";
 import Footer from "@/components/Layout/Footer/Footer";
 import useAsciiArt from "@/hooks/useAsciiArt/useAsciiArt";
-import useLenis from "@/hooks/useLenis";
+import useLenis from "@/hooks/useLenis/useLenis";
 import { asciiArt } from "../hooks/useAsciiArt/data/asciiArt";
 
 export default function Home() {
