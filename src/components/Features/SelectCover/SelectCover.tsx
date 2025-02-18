@@ -41,15 +41,14 @@ const SelectCover = () => {
           </DropdownMenuTrigger>
           <DropdownMenuContent
             className="bg-zinc-900 text-zinc-200 
-                border-zinc-700 w-screen sm:w-96"
+                border-zinc-700 w-screen sm:w-96 "
           >
             <DropdownMenuLabel>
               <ParagraphText text="Select a Cover" />
             </DropdownMenuLabel>
             <DropdownMenuSeparator className="bg-zinc-700" />
             <div
-              className=" h-dvh max-h-fit overflow-y-auto
-                "
+              className="h-dvh max-h-64 overflow-y-auto"
             >
               {coverData.map((cover) => (
                 <DropdownMenuItem
