@@ -1,23 +1,13 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 interface BlinkingDotProps {
   duration?: number; // Duration in milliseconds
   className?: string;
 }
 
-const BlinkingDot = ({ duration = 30000, className = "" }: BlinkingDotProps) => {
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(false);
-    }, duration);
-
-    return () => clearTimeout(timer);
-  }, [duration]);
-
-  if (!isVisible) return null;
+const BlinkingDot = ({ className = "" }: BlinkingDotProps) => {
+ 
 
   return (
     <div
