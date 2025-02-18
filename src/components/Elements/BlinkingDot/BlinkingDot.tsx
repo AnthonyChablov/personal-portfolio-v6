@@ -2,7 +2,6 @@
 import React from 'react';
 
 interface BlinkingDotProps {
-  duration?: number; // Duration in milliseconds
   className?: string;
 }
 
