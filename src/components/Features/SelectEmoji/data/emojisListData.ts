@@ -5,7 +5,7 @@ export interface EmojiItem {
 }
 
 export const emojiList: EmojiItem[] = [
-  { id: 1, emoji: "🌍", searchTerms: ["earth", "globe", "world"] },
+  { id: 1, emoji: "🐼", searchTerms: ["panda", "bear", "animal", "zoo"] },
 
   { id: 2, emoji: "🚀", searchTerms: ["rocket", "space", "launch"] },
   { id: 3, emoji: "🌈", searchTerms: ["rainbow", "colors", "pride"] },
@@ -28,7 +28,7 @@ export const emojiList: EmojiItem[] = [
   { id: 17, emoji: "🌞", searchTerms: ["sun", "sunny", "bright"] },
   { id: 18, emoji: "🚁", searchTerms: ["helicopter", "aircraft", "fly"] },
   { id: 19, emoji: "🍔", searchTerms: ["hamburger", "burger", "food"] },
-  { id: 20, emoji: "🐼", searchTerms: ["panda", "bear", "animal", "zoo"] },
+  { id: 20, emoji: "🌍", searchTerms: ["earth", "globe", "world"] },
   {
     id: 21,
     emoji: "🎮",
