@@ -13,5 +13,17 @@ describe("BlinkingDot.tsx", () => {
     expect(blinkingDot).toBeInTheDocument();
   });
 
+  it("should apply classname", () => {
+    // Arrange
+    const className = 'custom-classname'
+
+    // Act
+    render(<BlinkingDot  className={className}/>);
+    const blinkingDot = screen.getByRole('blinking-dot');
+
+    // Assert
+    expect(blinkingDot).toHaveClass(className);
+  });
+
  
 });
