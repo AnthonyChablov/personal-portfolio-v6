@@ -14,6 +14,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Loading from "@/components/ui/loading";
+import BlinkingDot from "@/components/Elements/BlinkingDot/BlinkingDot";
 
 const SelectIcon = () => {
   const {
@@ -28,7 +29,7 @@ const SelectIcon = () => {
 
   return (
     <div className="relative inset-0 z-50 w-fit">
-      <DropdownMenu>
+      <DropdownMenu>      
         <DropdownMenuTrigger
           className=" 
             rounded-lg bg-transparent 
@@ -37,7 +38,8 @@ const SelectIcon = () => {
             justify-center w-28 h-fit
             ease-in-out transition-all duration-300 transform hover:scale-110
           "
-        >
+        >        
+          <BlinkingDot/>
           {isLoading ? <Loading /> : selectedEmoji}
         </DropdownMenuTrigger>
         <DropdownMenuContent

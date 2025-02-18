@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useSelectCover } from "./hooks/useSelectCover";
 import EmojiLoadingBanner from "./options/LoadingBanner";
+import BlinkingDot from "@/components/Elements/BlinkingDot/BlinkingDot";
 
 const SelectCover = () => {
   const { selectedCoverComponent, handleSelectCover, coverData, isLoading } =
@@ -31,12 +32,13 @@ const SelectCover = () => {
         <DropdownMenu>
           <DropdownMenuTrigger
             className=" 
-            rounded-lg bg-transparent 
+            rounded-sm bg-transparent 
           text-zinc-200 hover:bg-zinc-900/40 hover:text-zinc-300
-            border-none p-1 h-fit
+            border-none px-4 py-1 h-fit
             ease-in-out transition-all duration-300 transform hover:scale-110
           "
-          >
+          > 
+            <BlinkingDot/>
             <ParagraphText size="sm" text="Change cover" />
           </DropdownMenuTrigger>
           <DropdownMenuContent
