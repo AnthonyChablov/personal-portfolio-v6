@@ -1,5 +1,5 @@
-
 import { useEffect } from 'react';
+
 
 const useAsciiArt = (asciiArt: string) => {
   useEffect(() => {
