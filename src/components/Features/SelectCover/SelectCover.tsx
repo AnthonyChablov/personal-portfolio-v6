@@ -34,8 +34,8 @@ const SelectCover = () => {
             className=" 
             rounded-sm bg-transparent 
           text-zinc-200 hover:bg-zinc-900/40 hover:text-zinc-300
-            border-none px-4 py-1 h-fit
-            ease-in-out transition-all duration-300 transform hover:scale-110
+            border-none px-4 py-1 h-fit focus:outline-none focus:bg-none
+            ease-in-out transition-all duration-300 transform hover:scale-110 
           "
           > 
             <BlinkingDot/>

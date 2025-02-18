@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
-import {BlinkingDot} from "../BlinkingDot";
+import BlinkingDot from "../BlinkingDot";
 
 describe("BlinkingDot.tsx", () => {
   it("should render in the DOM.", () => {

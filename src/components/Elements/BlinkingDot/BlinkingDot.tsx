@@ -4,7 +4,7 @@ interface BlinkingDotProps {
   className?: string;
 }
 
-export const BlinkingDot = ({ className = "" }: BlinkingDotProps) => {
+const BlinkingDot = ({ className = "" }: BlinkingDotProps) => {
   return (
     <div
       role="blinking-dot"
@@ -17,3 +17,5 @@ export const BlinkingDot = ({ className = "" }: BlinkingDotProps) => {
     />
   )
 }
+
+export default BlinkingDot;
