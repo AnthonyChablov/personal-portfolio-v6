@@ -3,8 +3,7 @@ import { renderHook } from "@testing-library/react";
 import { asciiArt } from "../data/asciiArt";
 import useAsciiArt from "../useAsciiArt";
 
-
-describe('useSearch', () => { 
+describe('useAsciiArt.ts', () => { 
     it('should print ASCII art to console with styling', () => {
         // Arrange
         const consoleSpy = vi.spyOn(console, 'log');

@@ -9,6 +9,7 @@ export const useLocalStorage = <T>({
   key,
   initialValue,
 }: UseLocalStorageProps<T>) => {
+  // Getting
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
       const item = window.localStorage.getItem(key);
@@ -19,6 +20,7 @@ export const useLocalStorage = <T>({
     }
   });
 
+  // Setting
   // Update local storage when the stored value changes
   const setValue = (value: T | ((val: T) => T)) => {
     try {
