@@ -1,13 +1,10 @@
-'use client'
-import React from 'react';
+import React from 'react'
 
 interface BlinkingDotProps {
   className?: string;
 }
 
-const BlinkingDot = ({ className = "" }: BlinkingDotProps) => {
- 
-
+export const BlinkingDot = ({ className = "" }: BlinkingDotProps) => {
   return (
     <div
       role="blinking-dot"
@@ -18,7 +15,5 @@ const BlinkingDot = ({ className = "" }: BlinkingDotProps) => {
         ${className}
       `}
     />
-  );
-};
-
-export default BlinkingDot;
+  )
+}
