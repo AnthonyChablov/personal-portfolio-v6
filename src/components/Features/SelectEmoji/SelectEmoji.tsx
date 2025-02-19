@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Loading from "@/components/ui/loading";
 import BlinkingTextBox from "@/components/Elements/BlinkingTextBox/BlinkingTextBox";
+import ActiveStatus from "@/components/Elements/ActiveStatus/ActiveStatus";
 
 const SelectIcon = () => {
   const {
@@ -41,6 +42,7 @@ const SelectIcon = () => {
         >        
           <BlinkingTextBox/>
           {isLoading ? <Loading /> : selectedEmoji}
+          <ActiveStatus/>
         </DropdownMenuTrigger>
         <DropdownMenuContent
           className="bg-zinc-900 text-zinc-200 
