@@ -31,7 +31,7 @@ export default function RootLayout({
         />
       </Head>
       <ReactLenis root>
-        <body className={`${jetBrainsMono.className} bg-black antialiased`}>
+        <body className={`${jetBrainsMono.className} bg-black antialiased overscroll-none`}>
           {children}
         </body>
       </ReactLenis>
