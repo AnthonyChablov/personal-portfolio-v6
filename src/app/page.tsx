@@ -1,8 +1,8 @@
 "use client";
 import Container from "@/components/Layout/Container/Container";
-import HeaderText from "@/components/Text/HeaderText/HeaderText";
+import HeaderText from "@/components/Typography/HeaderText/HeaderText";
 import Separator from "@/components/Layout/Separator/Separator";
-import ParagraphText from "@/components/Text/ParagraphText/ParagraphText";
+import ParagraphText from "@/components/Typography/ParagraphText/ParagraphText";
 import { skills, interests, hobbies, contactLinks } from "./_data/profileData";
 import SelectCover from "@/components/Features/SelectCover/SelectCover";
 import SelectIcon from "@/components/Features/SelectEmoji/SelectEmoji";

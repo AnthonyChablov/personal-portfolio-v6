@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useSelectEmoji } from "@/components/Features/SelectEmoji/hooks/useSelectEmoji";
-import ParagraphText from "../../Text/ParagraphText/ParagraphText";
+import ParagraphText from "../../Typography/ParagraphText/ParagraphText";
 import { emojiList } from "./data/emojisListData";
 import { Input } from "@/components/ui/input";
 import { Button } from "../../ui/button";

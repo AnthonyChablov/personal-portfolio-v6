@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Container from "@/components/Layout/Container/Container";
-import ParagraphText from "@/components/Text/ParagraphText/ParagraphText";
+import ParagraphText from "@/components/Typography/ParagraphText/ParagraphText";
 import { cn } from "@/lib/utils";
 import {
   DropdownMenu,

@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-import ParagraphText from '@/components/Text/ParagraphText/ParagraphText';
+import ParagraphText from '@/components/Typography/ParagraphText/ParagraphText';
 
 interface BlinkingDotProps {
   className?: string;
