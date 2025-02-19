@@ -25,14 +25,14 @@ A fully-responsive and interactive portfolio website built with modern technolog
 /src
   /app          # Application-specific pages and routing (Next.js App Router)
   /components   # Reusable UI components
-    /Elements   # Small, atomic UI elements (e.g., buttons, inputs, icons)
-    /Features   # Larger, feature-specific components (e.g., modals, carousels)
-    /Layout     # Layout-related components (e.g., headers, footers, sidebars)
-    /Typography # Typography-related components (e.g., headings, paragraphs)
-    /ui         # UI components from ShadCN (e.g., buttons, dialogs, forms)
-  /hooks        # Custom React hooks (e.g., useFetch, useTheme, useDebounce)
+    /Elements   # Small, atomic UI elements (e.g., icons, text-boxes, etc.)
+    /Features   # Larger, feature-specific components (e.g., SelectIcons, SelectCovers)
+    /Layout     # Layout-related components (e.g., containers, dividerss, footers)
+    /Typography # Typography-related components (e.g., header text, paragraph text, etc.)
+    /ui         # UI components from ShadCN (e.g., buttons, dialogs, sheets)
+  /hooks        # Custom React hooks (e.g., useIsHoverd, useLocalStorage, etc.)
   /lib          # Libraries, configurations, and utility functions
-    /utils.ts   # General utility functions (e.g., formatting, helper functions)
+    /utils.ts   # General utility functions (e.g., helper functions)
     /lenis.ts   # Lenis smooth scrolling configuration and initialization
   /public       # Static assets (e.g., images, fonts, icons, SEO assets)
 ```
