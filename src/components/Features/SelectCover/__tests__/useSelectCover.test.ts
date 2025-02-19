@@ -1,5 +1,4 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
-import { coverData } from "../data/coverData";
+import { describe, it, vi, beforeEach } from "vitest";
 
 describe("selectCover", () => {
   beforeEach(() => {
