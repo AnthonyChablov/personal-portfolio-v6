@@ -18,6 +18,7 @@ export const interests = [
   "Full Stack Web Development",
   "Distributed & Decentralized Systems",
   "System Design",
+  "E-commerce",
   "Software Architecture",
   "User Experience",
   "User Interface Design",
