@@ -15,7 +15,7 @@ import { useSelectCover } from "./hooks/useSelectCover";
 import EmojiLoadingBanner from "./options/LoadingBanner";
 
 const SelectCover = () => {
-  const { selectedCoverComponent, handleSelectCover, coverData, isLoading } =
+  const { selectedCover, setSelectedCoverId, coverData, isLoading } =
     useSelectCover("Dithered");
 
   return (
@@ -26,7 +26,7 @@ const SelectCover = () => {
         height: "225px",
       }}
     >
-      {isLoading ? <EmojiLoadingBanner /> : selectedCoverComponent}
+      {isLoading ? <EmojiLoadingBanner /> : selectedCover}
       <Container className="relative z-40 text-right top-5">
         <DropdownMenu>
           <DropdownMenuTrigger
@@ -53,7 +53,7 @@ const SelectCover = () => {
               {coverData.map((cover) => (
                 <DropdownMenuItem
                   key={cover.id}
-                  onClick={() => handleSelectCover(cover.id)}
+                  onClick={() => setSelectedCoverId(cover.id)}
                   className="hover:cursor-pointer hover:text-zinc-800"
                 >
                   <ParagraphText text={cover.name} />

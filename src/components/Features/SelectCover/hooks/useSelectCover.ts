@@ -1,46 +1,19 @@
-import { useState, useEffect } from "react";
 import { coverData } from "../data/coverData";
-
-export function selectCover(coverId: string) {
-  return coverData.find((cover) => cover.id === coverId)?.component;
-}
+import { useLocalStorage } from "@/hooks/useLocalStorage/useLocalStorage";
 
 export const useSelectCover = (defaultCoverId: string) => {
-  const [selectedCoverId, setSelectedCoverId] =
-    useState<string>(defaultCoverId);
-  const [isLoading, setIsLoading] = useState<boolean>(true); // Loading state
+  // Use local storage hook to persist selected cover ID
+  const { value: selectedCoverId, setStoredValue: setSelectedCoverId, isLoading } =
+    useLocalStorage("selectedCover", defaultCoverId);
 
-  // Effect to handle local storage after client-side mount
-  useEffect(() => {
-    try {
-      const savedCover = localStorage.getItem("selectedCover");
-      if (savedCover) {
-        setSelectedCoverId(savedCover);
-      }
-    } catch (error) {
-      console.error("Failed to read cover from local storage", error);
-    } finally {
-      setIsLoading(false); // Stop loading after attempting to fetch emoji
-    }
-  }, []);
-
-  const handleSelectCover = (coverId: string) => {
-    try {
-      localStorage.setItem("selectedCover", coverId);
-      setSelectedCoverId(coverId);
-    } catch (error) {
-      console.error("Failed to save emoji to local storage", error);
-    }
-  };
-
-  // Dynamically find the selected cover component based on the ID
-  const selectedCoverComponent = selectCover(selectedCoverId);
+  // Find the selected cover component dynamically
+  const selectedCover = coverData.find((cover) => cover.id === selectedCoverId)?.component;
 
   return {
     isLoading,
     selectedCoverId,
-    selectedCoverComponent,
-    handleSelectCover,
+    selectedCover,
+    setSelectedCoverId, // Update the selected cover ID
     coverData,
   };
 };
