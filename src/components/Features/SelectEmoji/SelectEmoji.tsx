@@ -19,7 +19,7 @@ import BlinkingTextBox from "@/components/Elements/BlinkingTextBox/BlinkingTextB
 const SelectIcon = () => {
   const {
     selectedEmoji,
-    updateSelectedEmoji,
+    selectEmoji,
     searchTerm,
     setSearchTerm,
     selectRandomEmoji,
@@ -92,7 +92,7 @@ const SelectIcon = () => {
               {filteredEmojis.map((emoji) => (
                 <DropdownMenuItem
                   key={emoji.id}
-                  onClick={() => updateSelectedEmoji(emoji.emoji)}
+                  onClick={() => selectEmoji(emoji.emoji)}
                   className="
                     text-3xl cursor-pointer hover:bg-zinc-800 
                     flex items-center justify-center h-fit
