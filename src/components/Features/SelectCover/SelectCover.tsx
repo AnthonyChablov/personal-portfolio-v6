@@ -38,7 +38,6 @@ const SelectCover = () => {
             ease-in-out transition-all duration-300 transform hover:scale-110 
           "
           > 
-            <BlinkingDot/>
             <ParagraphText size="sm" text="Change cover" />
           </DropdownMenuTrigger>
           <DropdownMenuContent
