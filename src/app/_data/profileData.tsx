@@ -6,7 +6,7 @@ export const skills = [
   "Sanity, Payload, Content Management Systems",
   "Solidity, Hardhat, Foundry",
   "Leaflet.js, D3.js",
-  "Shopify, Liquid, Hydrogen",
+  "Shopify, Hydrogen",
   "Tailwind CSS, CSS/SCSS, ShadCN, MUI, Bootstrap",
   "Git, Github, Version Control",
   "Unit & E2E Testing, Test-Driven Development",
