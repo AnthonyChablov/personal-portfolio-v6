@@ -5,7 +5,7 @@ const ActiveStatus = () => {
     <div 
       role='active-status' 
       className="
-        absolute bottom-0 right-1 flex items-center justify-center  
+        absolute bottom-0 right-0 flex items-center justify-center  
         bg-green-500 text-white font-medium text-sm rounded-full
         w-4 h-4 z-0 shadow-md
       "
