@@ -14,7 +14,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Loading from "@/components/ui/loading";
-import BlinkingDot from "@/components/Elements/BlinkingDot/BlinkingDot";
+import BlinkingTextBox from "@/components/Elements/BlinkingTextBox/BlinkingTextBox";
 
 const SelectIcon = () => {
   const {
@@ -39,7 +39,7 @@ const SelectIcon = () => {
             ease-in-out transition-all duration-300 transform hover:scale-110
           "
         >        
-          <BlinkingDot/>
+          <BlinkingTextBox/>
           {isLoading ? <Loading /> : selectedEmoji}
         </DropdownMenuTrigger>
         <DropdownMenuContent

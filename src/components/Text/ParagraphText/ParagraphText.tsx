@@ -3,16 +3,19 @@ import { cn } from "@/lib/utils";
 
 interface ParagraphTextProps {
   className?: string;
-  text: string;
-  size?: "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl";
+  text?: string;
+  size?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl";
+  children?: React.ReactNode;
 }
 
 const ParagraphText = ({
   className = "",
   text = "",
   size = "lg",
+  children = <></>,
 }: ParagraphTextProps) => {
   const paragraphSizes = {
+    xs: 'text-xs',
     sm: "text-sm",
     md: "text-md",
     lg: "text-lg",
@@ -27,12 +30,14 @@ const ParagraphText = ({
   const sizeClass = paragraphSizes[size];
 
   return (
-    <span
+    <p
       role="paragraph-text"
-      className={cn(`text-zinc-300 dark:text-zinc-900 font-light ${className}`)}
+      className={cn(
+        `text-zinc-400 dark:text-zinc-500 font-medium ${sizeClass} ${className}`
+      )}
     >
-      <p className={sizeClass}>{text}</p>
-    </span>
+      {text || children}
+    </p>
   );
 };
 
