@@ -20,8 +20,8 @@ export const interests = [
   "System Design",
   "E-commerce",
   "Software Architecture",
-  "User Experience",
-  "User Interface Design",
+  "UX & UI Design",
+ 
 ];
 
 export const hobbies = [
