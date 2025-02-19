@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useSelectCover } from "./hooks/useSelectCover";
 import EmojiLoadingBanner from "./options/LoadingBanner";
-import BlinkingDot from "@/components/Elements/BlinkingDot/BlinkingDot";
 
 const SelectCover = () => {
   const { selectedCoverComponent, handleSelectCover, coverData, isLoading } =
