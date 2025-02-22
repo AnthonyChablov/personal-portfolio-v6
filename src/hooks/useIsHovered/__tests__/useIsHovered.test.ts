@@ -26,7 +26,7 @@ describe('useIsHovered.tsx', () => {
     it('should change the state back false when mouse leaves' , ()=>{
         // Arrange: Render the hook
         const { result } = renderHook(() => useIsHovered());
-
+        
         act(() => {
             result.current.onMouseEnter();            
             result.current.onMouseLeave();
