@@ -5,15 +5,16 @@ import Container from "../Container";
 describe("Container.tsx", () => {
   it("should render in the DOM", () => {
     // Arrange
-    const role = "container";
+    const child = <div>123</div>
+
 
     // Act
     render(
       <Container>
-        <></>
+         {child}
       </Container>
     );
-    const containerComponent = screen.getByRole(role);
+    const containerComponent = screen.getByText(123);
 
     // Assert
     expect(containerComponent).toBeInTheDocument();
@@ -22,30 +23,32 @@ describe("Container.tsx", () => {
   it("should render with custom classnames", () => {
     // Arrange
     const customClassName = "custom-class-name";
-    const role = "container";
+    const childText = '123'
+    const child = <div>{childText}</div>
 
     // Act
     render(
       <Container className={`${customClassName}`}>
-        <></>
+        {child}
       </Container>
     );
-    const containerComponent = screen.getByRole(role);
+    const containerComponent = screen.getByText(`123`);
 
     // Assert
-    expect(containerComponent).toHaveClass(`${customClassName}`);
+    expect(containerComponent.parentNode).toHaveClass(`${customClassName}`);
   });
 
   it("should render with children", () => {
     // Arrange
-    const role = "child";
-    const child = <div role={`${role}`}>child</div>;
+    const childText = '123'
+    const child = <div>{childText}</div>
 
     // Act
     render(<Container>{child}</Container>);
-    const containerChild = screen.getByRole("child");
+    const containerChild = screen.getByText(childText);
 
     // Assert
     expect(containerChild).toBeInTheDocument();
+    expect(containerChild).toBe(childText)
   });
 });
