@@ -8,7 +8,7 @@ describe("Footer.tsx", () => {
 
     // Act
     render(<Footer />);
-    const footerComponent = screen.getByRole("footer");
+    const footerComponent = screen.getByTestId("footer");
 
     // Assert
     expect(footerComponent).toBeInTheDocument();
@@ -21,7 +21,7 @@ describe("Footer.tsx", () => {
     // Act
     render(<Footer />);
     // Select the footer and the date
-    const footerComponent = screen.getByRole("footer");
+    const footerComponent = screen.getByTestId("footer");
     const footerDate = screen.getByRole("content-info");
 
     // Assert
