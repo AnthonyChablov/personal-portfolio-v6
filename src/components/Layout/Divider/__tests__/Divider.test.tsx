@@ -5,11 +5,11 @@ import Divider from "../Divider";
 describe("Divider.tsx", () => {
   it("should render in the DOM", () => {
     // Arrange
-    const role = "divider";
+    const testID = "divider";
 
     // Act
     render(<Divider />);
-    const dividerComponent = screen.getByRole(role);
+    const dividerComponent = screen.getByTestId(testID);
 
     // Assert
     expect(dividerComponent).toBeInTheDocument();
@@ -33,7 +33,7 @@ describe("Divider.tsx", () => {
         margin={margin}
       />
     );
-    const dividerComponent = screen.getByRole("divider");
+    const dividerComponent = screen.getByTestId("divider");
 
     // Assert
     expect(dividerComponent).toHaveClass(className);
