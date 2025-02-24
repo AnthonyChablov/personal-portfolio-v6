@@ -7,7 +7,7 @@ describe("BlinkingTextBox.tsx", () => {
 
     // Act
     render(<BlinkingTextBox />);
-    const textBox = screen.getByRole('text-box');
+    const textBox = screen.getByTestId('text-box');
 
     // Assert
     expect(textBox).toBeInTheDocument();
@@ -19,7 +19,7 @@ describe("BlinkingTextBox.tsx", () => {
 
     // Act
     render(<BlinkingTextBox  className={className}/>);
-    const textBox = screen.getByRole('text-box');
+    const textBox = screen.getByTestId('text-box');
 
     // Assert
     expect(textBox).toHaveClass(className);
