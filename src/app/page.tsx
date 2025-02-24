@@ -15,7 +15,7 @@ export default function Home() {
   useAsciiArt(asciiArt);
   useLenis();
   return (
-    <main className="h-full bg-black">
+    <main className=" bg-black">
       <SelectCover />
       <Container className="">
         <section>
