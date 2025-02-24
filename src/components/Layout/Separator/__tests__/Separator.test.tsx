@@ -6,7 +6,7 @@ describe("Separator.tsx", () => {
   it("should render in the DOM", () => {
     // Arrange & Act
     render(<Separator />);
-    const separatorComponent = screen.getByRole("separator");
+    const separatorComponent = screen.getByTestId("separator");
 
     // Assert
     expect(separatorComponent).toBeInTheDocument();
@@ -18,7 +18,7 @@ describe("Separator.tsx", () => {
 
     // Act
     render(<Separator className={customClassName} />);
-    const separatorComponent = screen.getByRole("separator");
+    const separatorComponent = screen.getByTestId("separator");
 
     // Assert
     expect(separatorComponent).toBeInTheDocument();

@@ -18,7 +18,7 @@ const Separator = ({ size = "small", className = "" }: SeparatorProps) => {
 
   return (
     <div
-      role="separator"
+      data-testid="separator"
       id={`${size}-separator`}
       className={cn(sizeClasses[size] + " " + className)}
     ></div>
