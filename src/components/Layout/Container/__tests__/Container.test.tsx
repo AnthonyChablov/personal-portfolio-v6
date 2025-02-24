@@ -49,6 +49,6 @@ describe("Container.tsx", () => {
 
     // Assert
     expect(containerChild).toBeInTheDocument();
-    expect(containerChild).toBe(childText)
+    expect(containerChild.textContent).toEqual(childText);
   });
 });
