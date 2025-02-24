@@ -15,6 +15,7 @@ describe('useIsHovered.tsx', () => {
         // Arrange: Render the hook
         const { result } = renderHook(() => useIsHovered());
 
+        // Act
         act(() => {
             result.current.onMouseEnter();
         });
@@ -27,6 +28,7 @@ describe('useIsHovered.tsx', () => {
         // Arrange: Render the hook
         const { result } = renderHook(() => useIsHovered());
         
+        // Act
         act(() => {
             result.current.onMouseEnter();            
             result.current.onMouseLeave();
