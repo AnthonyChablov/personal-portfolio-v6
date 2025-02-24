@@ -31,7 +31,6 @@ const ParagraphText = ({
 
   return (
     <p
-      role="paragraph-text"
       className={cn(
         `text-zinc-400 dark:text-zinc-500 font-medium ${sizeClass} ${className}`
       )}

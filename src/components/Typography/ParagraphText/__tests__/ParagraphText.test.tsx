@@ -51,7 +51,7 @@ describe("ParagraphText.tsx", () => {
     render(
       <ParagraphText className={paragraphTextClassName} text={paragraphText} />
     );
-    const paragraphTextComponent = screen.getByRole(`paragraph-text`);
+    const paragraphTextComponent = screen.getByText(paragraphText);
 
     // Assert
     expect(paragraphTextComponent).toHaveClass(paragraphTextClassName);
