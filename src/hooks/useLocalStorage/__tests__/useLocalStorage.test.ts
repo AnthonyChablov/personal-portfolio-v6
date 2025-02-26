@@ -1,22 +1,61 @@
-import { expect, it, describe, vi } from "vitest";
-import { renderHook } from "@testing-library/react";
+import { expect, it, describe, vi,  } from "vitest";
+import { renderHook, act } from "@testing-library/react";
 import { useLocalStorage } from "../useLocalStorage";
 
+// Mock localStorage
+beforeEach(() => {
+    vi.spyOn(global.Storage.prototype, "getItem").mockImplementation(() => null);
+    vi.spyOn(global.Storage.prototype, "setItem").mockImplementation(() => {});
+});
+
+afterEach(() => {
+    vi.restoreAllMocks();
+});
 
 describe('useLocalStorage.tsx', () => { 
-    it('should call getItem on initial render with initialValue', () => {
-        // Arrange: Spy on window.localStorage.setItem 
-        const getItemSpy = vi.spyOn(window.localStorage, 'getItem');
+    it("should initialize with a default value if localStorage is empty", () => {
+        // 🔹 Arrange: Set up the mock environment
+        const key = "testKey";
+        const defaultValue = "defaultValue";
 
-        // Act: Render the hook with initial value 
-        renderHook(() => useLocalStorage({ initialValue: true, key: 'new' }));
+        // 🔹 Act: Render the hook
+        const { result } = renderHook(() => useLocalStorage(key, defaultValue));
 
-        // Assert: Ensure setItem was called with correct arguments  
-        expect(getItemSpy).toHaveBeenCalledWith( 'new' );
-
-        // Clean up: Restore the spy after the test 
-        getItemSpy.mockRestore();
+        // 🔹 Assert: Check expected behavior
+        expect(result.current.value).toBe(defaultValue);
+        expect(localStorage.setItem).toHaveBeenCalledWith(key, JSON.stringify(defaultValue));
+        expect(result.current.isLoading).toBe(false);
     });
 
+    it("should retrieve the stored value from localStorage if it exists", () => {
+        // 🔹 Arrange: Mock localStorage with a stored value
+        const key = "existingKey";
+        const storedValue = "storedValue";
+        vi.spyOn(global.Storage.prototype, "getItem").mockReturnValue(JSON.stringify(storedValue));
     
+        // 🔹 Act
+        const { result } = renderHook(() => useLocalStorage(key, "defaultValue"));
+    
+        // 🔹 Assert
+        expect(result.current.value).toBe(storedValue);
+        expect(localStorage.getItem).toHaveBeenCalledWith(key);
+    });
+
+    it("should update localStorage and state when setStoredValue is called", () => {
+        // 🔹 Arrange
+        const key = "testKey";
+        const defaultValue = "initialValue";
+        const newValue = "newValue";
+    
+        const { result } = renderHook(() => useLocalStorage(key, defaultValue));
+    
+        // 🔹 Act
+        act(() => {
+          result.current.setStoredValue(newValue);
+        });
+    
+        // 🔹 Assert
+        expect(result.current.value).toBe(newValue);
+        expect(localStorage.setItem).toHaveBeenCalledWith(key, JSON.stringify(newValue));
+    });
 })
