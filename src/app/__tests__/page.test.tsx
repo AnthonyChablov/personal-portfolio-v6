@@ -22,9 +22,9 @@ describe("page.tsx", () => {
   it("should render in the DOM.", () => {
     // Act
     render(<Page/>);
-    const activeStatus = screen.getByRole('main');
+    const homePage = screen.getByRole('main');
 
     // Assert
-    expect(activeStatus).toBeInTheDocument();
+    expect(homePage).toBeInTheDocument();
   });
 });
