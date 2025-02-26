@@ -8,6 +8,7 @@ export function useSelectEmoji(initialEmojis: EmojiItem[], defaultEmoji = '🐼'
   // Local state for search
   const [searchTerm, setSearchTerm] = useState('');
   
+  
   // Local storage for selected emoji
   const {
     value: selectedEmoji,
