@@ -13,7 +13,6 @@ vi.mock("@/hooks/useLocalStorage/useLocalStorage");
 const mockedUseLocalStorage = vi.mocked(useLocalStorage);
 
 const mockInitialEmojis: EmojiItem[] = emojiList;
-
 const defaultEmoji = "🐼";
 let storedValue = defaultEmoji; // Track stored value
 
@@ -35,118 +34,120 @@ afterEach(() => {
 
 describe("useSelectEmoji", () => {
   it("should return the default emoji when localStorage returns the default emoji", () => {
-    // Render the hook.
+    // Arrange
     const { result } = renderHook(() =>
       useSelectEmoji(mockInitialEmojis, defaultEmoji)
     );
 
+    // Assert
     expect(result.current.selectedEmoji).toBe(defaultEmoji);
     expect(result.current.isLoading).toBe(false);
     expect(result.current.allEmojis).toEqual(mockInitialEmojis);
   });
 
-  
-
   it("should propagate the isLoading state from useLocalStorage", () => {
-
+    // Arrange
     const { result } = renderHook(() =>
       useSelectEmoji(mockInitialEmojis, defaultEmoji)
     );
 
+    // Assert
     expect(result.current.isLoading).toBe(false);
   });
 
   it("should filter emojis based on search term", () => {
+    // Arrange
     const { result } = renderHook(() => useSelectEmoji(mockInitialEmojis));
 
-    // Set a search term
+    // Act & Assert for different search terms
     act(() => {
       result.current.setSearchTerm("cat");
     });
-
     expect(result.current.filteredEmojis[0].emoji).toEqual("🐱");
 
     act(() => {
       result.current.setSearchTerm("dog");
     });
-
     expect(result.current.filteredEmojis[0].emoji).toEqual("🐶");
 
     act(() => {
       result.current.setSearchTerm("rocket");
     });
-
     expect(result.current.filteredEmojis[0].emoji).toEqual("🚀");
   });
 
   it("should allow selecting an emoji", () => {
+    // Arrange
     const { result } = renderHook(() => useSelectEmoji(mockInitialEmojis));
-  
-    // Select an emoji
+
+    // Act
     act(() => {
       result.current.selectEmoji("🐶");
     });
-  
-    // Assert that the local storage value has been updated
+
+    // Assert
     expect(storedValue).toBe("🐶");
-  
-    // Re-render the hook to see if it gets the updated value
+
+    // Re-render the hook to check if the updated emoji is stored
     const { result: updatedResult } = renderHook(() => useSelectEmoji(mockInitialEmojis));
     expect(updatedResult.current.selectedEmoji).toBe("🐶");
   });
 
   it("should return a different selected emoji when localStorage returns a different emoji", () => {
-    let storedValue = "🐱"; // Simulate an initial stored value
-  
-    // Properly mock useLocalStorage to track updates
+    // Arrange
+    storedValue = "🐱"; // Simulate an initial stored value
     mockedUseLocalStorage.mockImplementation(() => ({
       value: storedValue,
       setStoredValue: (newValue: string) => {
-        storedValue = newValue; // Update the mock storage value
+        storedValue = newValue;
       },
       isLoading: false,
     }));
-  
+
     const { result } = renderHook(() => useSelectEmoji(mockInitialEmojis));
-  
-    // Select an emoji
+
+    // Act
     act(() => {
       result.current.selectEmoji("🐶");
     });
-  
-    // Assert that the local storage value has been updated
+
+    // Assert
     expect(storedValue).toBe("🐶");
-  
+
     // Re-render the hook to see if it gets the updated value
     const { result: updatedResult } = renderHook(() =>
       useSelectEmoji(mockInitialEmojis, storedValue)
     );
-  
+
     expect(updatedResult.current.selectedEmoji).toBe("🐶");
   });
 
   it("should allow selecting a random emoji", () => {
+    // Arrange
     const { result } = renderHook(() => useSelectEmoji(mockInitialEmojis));
 
-    // Simulate selecting a random emoji
+    // Act
     act(() => {
       result.current.selectRandomEmoji();
     });
 
+    // Assert
     expect(mockInitialEmojis.map((emoji) => emoji.emoji)).toContain(
       result.current.selectedEmoji
     );
   });
 
   it("should clear the search term", () => {
+    // Arrange
     const { result } = renderHook(() => useSelectEmoji(mockInitialEmojis));
 
-    // Set a search term and then clear it
+    // Act
     act(() => {
       result.current.setSearchTerm("cat");
       result.current.clearSearch();
     });
 
+    // Assert
     expect(result.current.searchTerm).toBe("");
     expect(result.current.filteredEmojis).toEqual(mockInitialEmojis);
   });
