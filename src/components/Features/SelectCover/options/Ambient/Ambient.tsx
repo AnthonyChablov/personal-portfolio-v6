@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
 
-const Ambient: React.FC = ({}) => {
+const Ambient = ({}) => {
   return (
     <>
       {/* Fractal Background Animation */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden bg-black">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden bg-black" data-testid='cover'>
         {/* Fractal Effect (background pattern) */}
         <div className="absolute top-0 left-0 w-full h-full fractal-background"></div>
       </div>

@@ -25,6 +25,7 @@ afterEach(() => {
 describe("useSelectCover", () => {
   it("should return the default cover and its component when localStorage returns the default cover ID", () => {
     const defaultCoverId = "cover1";
+    
     // Simulate useLocalStorage returning default values.
     mockedUseLocalStorage.mockReturnValue({
       value: defaultCoverId,
