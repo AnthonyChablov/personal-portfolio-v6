@@ -3,7 +3,7 @@ import React from "react";
 
 const LoadingBanner = () => {
   return (
-    <div className="relative w-full h-full overflow-hidden">
+    <div className="relative w-full h-full overflow-hidden" data-testid='cover'>
       {/* Background Glitch Animation */}
       <div className="absolute top-0 left-0 w-full h-full bg-black  animate-pulse"></div>
 

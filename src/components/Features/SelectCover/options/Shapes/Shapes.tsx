@@ -5,7 +5,7 @@ const ShapesFlux = () => {
   return (
     <>
       {/* Background Animation Container */}
-      <div className="absolute top-0 left-0 w-full h-full">
+      <div className="absolute top-0 left-0 w-full h-full" data-testid='cover'>
         {/* Triangles and Shapes */}
         <div className=" ">
           <div className=" shape triangle"></div>

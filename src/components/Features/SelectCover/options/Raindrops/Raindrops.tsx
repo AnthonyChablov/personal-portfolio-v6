@@ -3,7 +3,7 @@ import React from "react";
 
 const Raindrops = () => {
   return (
-    <div className="absolute top-0 left-0 w-full h-full overflow-hidden bg-gradient-to-r from-black  to-black">
+    <div className="absolute top-0 left-0 w-full h-full overflow-hidden bg-gradient-to-r from-black  to-black" data-testid='cover'>
       {" "}
       {/* Raindrops */}
       <div className="raindrop raindrop-1"></div>

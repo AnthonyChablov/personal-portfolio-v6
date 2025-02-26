@@ -12,7 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useSelectCover } from "./hooks/useSelectCover";
-import EmojiLoadingBanner from "./options/LoadingBanner";
+import EmojiLoadingBanner from "./options/LoadingBanner/LoadingBanner";
 
 const SelectCover = () => {
   const { selectedCover, setSelectedCoverId, coverData, isLoading } =

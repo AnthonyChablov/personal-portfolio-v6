@@ -5,7 +5,7 @@ const Lazers = () => {
   return (
     <>
       {/* Background Animation Container */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden bg-black">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden bg-black" data-testid='cover'>
         {/* Laser Beams */}
         <div className="laser laser-1"></div>
         <div className="laser laser-2"></div>

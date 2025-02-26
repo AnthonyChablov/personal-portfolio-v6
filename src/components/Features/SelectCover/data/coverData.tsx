@@ -1,8 +1,8 @@
-import Dithered from "../options/Dithered";
-import GlitchText from "../options/GlitchText";
-import Shapes from "../options/Shapes";
-import Raindrops from "../options/Raindrops";
-import Lazers from "../options/Lazers";
+import Dithered from "../options/Dithered/Dithered";
+import GlitchText from "../options/GlitchText/GlitchText";
+import Shapes from "../options/Shapes/Shapes";
+import Raindrops from "../options/Raindrops/Raindrops";
+import Lazers from "../options/Lazers/Lazers";
 import Ambient from "../options/Ambient/Ambient";
 
 export interface CoverItem {
