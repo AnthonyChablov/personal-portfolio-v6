@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react";
 
-export function useLocalStorage<T>(key: string, initialValue: T) {
+export function useLocalStorage(key: string, initialValue: string) {
   /* State to store the value retrieved from localStorage */
-  const [value, setValue] = useState<T>(initialValue);
+  const [value, setValue] = useState<string>(initialValue);
   
   /* Loading state to indicate whether the localStorage data has been retrieved */
   const [isLoading, setIsLoading] = useState(true);
@@ -33,7 +33,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
   }, [key, initialValue]); // Re-run effect if the key or initialValue changes
 
   /* Function to update the stored value in localStorage and state */
-  const setStoredValue = (newValue: T) => {
+  const setStoredValue = (newValue: string) => {
     try {
       /* Ensure we are running in the browser */
       if (typeof window !== "undefined") {
