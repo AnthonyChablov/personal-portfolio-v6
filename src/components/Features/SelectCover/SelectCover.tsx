@@ -20,6 +20,7 @@ const SelectCover = () => {
 
   return (
     <div
+      data-testid='select-cover'
       className={cn(`absolute w-full z-20 overflow-hidden`)}
       style={{
         width: "100%",
@@ -29,7 +30,7 @@ const SelectCover = () => {
       {isLoading ? <EmojiLoadingBanner /> : selectedCover}
       <Container className="relative z-40 text-right top-5">
         <DropdownMenu>
-          <DropdownMenuTrigger
+          <DropdownMenuTrigger 
             className=" 
             rounded-sm bg-transparent 
           text-zinc-200 hover:bg-zinc-900/40 hover:text-zinc-300
@@ -39,7 +40,8 @@ const SelectCover = () => {
           > 
             <ParagraphText size="sm" text="Change cover" />
           </DropdownMenuTrigger>
-          <DropdownMenuContent
+          <DropdownMenuContent 
+            data-testid='content'
             className="bg-zinc-900 text-zinc-200 
                 border-zinc-700 w-screen sm:w-96 "
           >
@@ -48,15 +50,16 @@ const SelectCover = () => {
             </DropdownMenuLabel>
             <DropdownMenuSeparator className="bg-zinc-700" />
             <div
-              className="h-dvh max-h-64 overflow-y-auto"
+              className="h-dvh max-h-64 overflow-y-auto" 
             >
               {coverData.map((cover) => (
                 <DropdownMenuItem
+                  data-testid='menu-item'
                   key={cover.id}
                   onClick={() => setSelectedCoverId(cover.id)}
                   className="hover:cursor-pointer hover:text-zinc-800"
                 >
-                  <ParagraphText text={cover.name} />
+                  <ParagraphText data-testid='dropdown-menu-item' text={cover.name} />
                 </DropdownMenuItem>
               ))}
             </div>
