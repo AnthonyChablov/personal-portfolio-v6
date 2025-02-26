@@ -11,8 +11,6 @@ import { useLocalStorage } from "@/hooks/useLocalStorage/useLocalStorage";
 vi.mock("@/hooks/useLocalStorage/useLocalStorage");
 // Get a typed version of the mocked useLocalStorage.
 const mockedUseLocalStorage = vi.mocked(useLocalStorage);
-// A mock function to simulate updating the stored value.
-const mockSetStoredValue = vi.fn();
 
 const mockInitialEmojis: EmojiItem[] = emojiList;
 
