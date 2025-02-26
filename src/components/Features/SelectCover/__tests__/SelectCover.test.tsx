@@ -63,7 +63,7 @@ describe("SelectCover.tsx", () => {
 
         // Act
         const button = screen.getByRole("button", { name: "Change cover" }); 
-        fireEvent.dblClick(button);    
+        fireEvent.click(button);    
 
         // Assert
         expect(screen.queryByTestId("content")).not.toBeInTheDocument();        
