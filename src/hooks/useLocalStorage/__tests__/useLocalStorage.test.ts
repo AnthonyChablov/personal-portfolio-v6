@@ -1,5 +1,5 @@
-import { expect, it, describe, vi,  } from "vitest";
-import { renderHook, act } from "@testing-library/react";
+import { expect, it, describe, vi,   } from "vitest";
+import { renderHook, act, waitFor } from "@testing-library/react";
 import { useLocalStorage } from "../useLocalStorage";
 
 // Mock localStorage
@@ -57,5 +57,22 @@ describe('useLocalStorage.tsx', () => {
         // 🔹 Assert
         expect(result.current.value).toBe(newValue);
         expect(localStorage.setItem).toHaveBeenCalledWith(key, JSON.stringify(newValue));
+    });
+
+    it("should update isLoading to false after data has been retrieved", async () => {
+        // 🔹 Arrange: Set up mock localStorage with a stored value
+        const key = "testKey";
+        const storedValue = "storedValue";
+        vi.spyOn(global.Storage.prototype, "getItem").mockReturnValue(JSON.stringify(storedValue));
+
+        // 🔹 Act: Render the hook
+        const { result } = renderHook(() => useLocalStorage(key, "defaultValue"));
+
+        // Wait for the effect to complete
+        await waitFor(() => expect(result.current.isLoading).toBe(false));
+
+        // 🔹 Assert: After loading, the isLoading state should be false
+        expect(result.current.value).toBe(storedValue);
+        expect(result.current.isLoading).toBe(false);
     });
 })
