@@ -10,7 +10,7 @@ const DitheredBanner = ({ animationDuration = "2s" }: DitheredBoxProps) => {
     <>
       {/* Background Glitch Animation */}
       <div 
-        data-testid='cover'
+        data-testid='dithered-cover'
         className="absolute top-0 left-0 w-full h-full"
         style={{
           backgroundImage:

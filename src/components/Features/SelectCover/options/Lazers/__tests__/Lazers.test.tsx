@@ -5,7 +5,7 @@ import Lazers from "../Lazers";
 describe("Lazers.tsx", () => {
   it("should render in the dom", () => {
     // Arrange
-    const testId = 'cover'
+    const testId = 'lazer-cover'
 
     // Act
     render(<Lazers  />);

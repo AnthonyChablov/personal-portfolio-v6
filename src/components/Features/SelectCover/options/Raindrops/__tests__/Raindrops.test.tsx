@@ -5,7 +5,7 @@ import Raindrops from "../Raindrops";
 describe("Raindrops.tsx", () => {
   it("should render in the dom", () => {
     // Arrange
-    const testId = 'cover'
+    const testId = 'raindrop-cover'
 
     // Act
     render(<Raindrops  />);

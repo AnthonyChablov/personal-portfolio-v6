@@ -5,7 +5,7 @@ import LoadingBanner from "../LoadingBanner";
 describe("Raindrops.tsx", () => {
   it("should render in the dom", () => {
     // Arrange
-    const testId = 'cover';
+    const testId = 'loading-cover';
 
     // Act
     render(<LoadingBanner/>);

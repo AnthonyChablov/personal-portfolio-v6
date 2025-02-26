@@ -6,7 +6,7 @@ import DitheredBanner from "../Dithered";
 describe("Dithered.tsx", () => {
   it("should render in the dom", () => {
     // Arrange
-    const testId = 'cover'
+    const testId = 'dithered-cover'
 
     // Act
     render(<DitheredBanner  />);

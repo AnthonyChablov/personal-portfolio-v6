@@ -5,7 +5,7 @@ import ShapesFlux from "../Shapes";
 describe("Shapes.tsx", () => {
   it("should render in the dom", () => {
     // Arrange
-    const testId = 'cover'
+    const testId = 'shapes-cover'
 
     // Act
     render(<ShapesFlux  />);

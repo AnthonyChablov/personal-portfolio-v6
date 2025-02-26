@@ -5,7 +5,7 @@ const Ambient = ({}) => {
   return (
     <>
       {/* Fractal Background Animation */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden bg-black" data-testid='cover'>
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden bg-black" data-testid='ambient-cover'>
         {/* Fractal Effect (background pattern) */}
         <div className="absolute top-0 left-0 w-full h-full fractal-background"></div>
       </div>

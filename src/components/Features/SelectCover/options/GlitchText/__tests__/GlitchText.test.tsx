@@ -6,7 +6,7 @@ import GlitchText from "../GlitchText";
 describe("GlitchText.tsx", () => {
   it("should render in the dom", () => {
     // Arrange
-    const testId = 'cover'
+    const testId = 'glitch-cover'
 
     // Act
     render(<GlitchText  />);
