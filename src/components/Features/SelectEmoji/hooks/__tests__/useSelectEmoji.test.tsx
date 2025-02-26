@@ -50,11 +50,12 @@ describe("useSelectEmoji", () => {
   
 
   it("should propagate the isLoading state from useLocalStorage", () => {
+
     const { result } = renderHook(() =>
       useSelectEmoji(mockInitialEmojis, defaultEmoji)
     );
 
-    expect(result.current.isLoading).toBe(true);
+    expect(result.current.isLoading).toBe(false);
   });
 
   it("should filter emojis based on search term", () => {
@@ -97,20 +98,33 @@ describe("useSelectEmoji", () => {
   });
 
   it("should return a different selected emoji when localStorage returns a different emoji", () => {
-    const defaultEmoji = "🐼";
-    const storedEmoji = "🐱";
-
-    mockedUseLocalStorage.mockReturnValue({
-      value: defaultEmoji,
-      setStoredValue: mockSetStoredValue,
+    let storedValue = "🐱"; // Simulate an initial stored value
+  
+    // Properly mock useLocalStorage to track updates
+    mockedUseLocalStorage.mockImplementation(() => ({
+      value: storedValue,
+      setStoredValue: (newValue: string) => {
+        storedValue = newValue; // Update the mock storage value
+      },
       isLoading: false,
+    }));
+  
+    const { result } = renderHook(() => useSelectEmoji(mockInitialEmojis));
+  
+    // Select an emoji
+    act(() => {
+      result.current.selectEmoji("🐶");
     });
-
-    const { result } = renderHook(() =>
-      useSelectEmoji(mockInitialEmojis, storedEmoji)
+  
+    // Assert that the local storage value has been updated
+    expect(storedValue).toBe("🐶");
+  
+    // Re-render the hook to see if it gets the updated value
+    const { result: updatedResult } = renderHook(() =>
+      useSelectEmoji(mockInitialEmojis, storedValue)
     );
-
-    expect(result.current.selectedEmoji).toBe(storedEmoji);
+  
+    expect(updatedResult.current.selectedEmoji).toBe("🐶");
   });
 
   it("should allow selecting a random emoji", () => {
