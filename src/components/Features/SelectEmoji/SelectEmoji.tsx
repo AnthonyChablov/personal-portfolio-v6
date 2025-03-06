@@ -17,7 +17,7 @@ import Loading from "@/components/ui/loading";
 import BlinkingTextBox from "@/components/Elements/BlinkingTextBox/BlinkingTextBox";
 import ActiveStatus from "@/components/Elements/ActiveStatus/ActiveStatus";
 
-const SelectIcon = () => {
+const SelectEmoji = () => {
   const {
     selectedEmoji,
     selectEmoji,
@@ -29,7 +29,7 @@ const SelectIcon = () => {
   } = useSelectEmoji(emojiList);
 
   return (
-    <div className="relative inset-0 z-50 w-fit">
+    <div className="relative inset-0 z-50 w-fit" data-testid='select-emoji'>
       <DropdownMenu>      
         <DropdownMenuTrigger
           className=" 
@@ -45,6 +45,7 @@ const SelectIcon = () => {
           <ActiveStatus/>
         </DropdownMenuTrigger>
         <DropdownMenuContent
+          data-testid='content'
           className="bg-zinc-900 text-zinc-200 
           border-zinc-700 w-screen sm:w-96"
         >
@@ -93,6 +94,7 @@ const SelectIcon = () => {
             >
               {filteredEmojis.map((emoji) => (
                 <DropdownMenuItem
+                  data-testid='dropdown-menu'
                   key={emoji.id}
                   onClick={() => selectEmoji(emoji.emoji)}
                   className="
@@ -111,4 +113,4 @@ const SelectIcon = () => {
   );
 };
 
-export default SelectIcon;
+export default SelectEmoji;
