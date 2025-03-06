@@ -4,7 +4,6 @@ export const skills = [
   "React.js, Next.js, Remix.js, React Meta-Frameworks",
   "Tanstack, Tanstack Query, SWR",
   "Sanity, Payload, Content Management Systems",
-  "Solidity, Hardhat, Foundry",
   "Leaflet.js, D3.js",
   "Shopify, Hydrogen",
   "Tailwind CSS, CSS/SCSS, ShadCN, MUI, Bootstrap",
@@ -16,7 +15,7 @@ export const skills = [
 
 export const interests = [
   "Full Stack Web Development",
-  "Distributed & Decentralized Systems",
+  "Distributed Systems",
   "System Design",
   "E-commerce",
   "Software Architecture",
