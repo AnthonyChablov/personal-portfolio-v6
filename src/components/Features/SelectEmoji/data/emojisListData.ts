@@ -51,4 +51,5 @@ export const emojiList: EmojiItem[] = [
   { id: 31, emoji: "⚰️", searchTerms: ["coffin", "death", "halloween"] },
   { id: 32, emoji: "🦄", searchTerms: ["unicorn", "mythical", "magic"] },
   { id: 33, emoji: "🐼", searchTerms: ["panda", "bear", "animal", "zoo"] },
+  { id: 34, emoji: "🌵", searchTerms: ["cactus",  "green", "plant", "vegetation", 'desert'] },
 ];
