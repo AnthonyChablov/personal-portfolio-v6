@@ -4,7 +4,7 @@ import { EmojiItem } from '../data/emojisListData';
 
 const STORAGE_KEY = 'selectedEmoji';
 
-export function useSelectEmoji(initialEmojis: EmojiItem[], defaultEmoji = '🐼') {
+export function useSelectEmoji(initialEmojis: EmojiItem[], defaultEmoji = '🌲') {
   // Local state for search
   const [searchTerm, setSearchTerm] = useState('');
   
