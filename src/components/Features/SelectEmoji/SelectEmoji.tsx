@@ -33,10 +33,10 @@ const SelectEmoji = () => {
       <DropdownMenu>      
         <DropdownMenuTrigger
           className=" 
-            rounded-lg bg-transparent 
+            rounded-lg bg-transparent hover:cursor-pointer
           text-zinc-200 hover:bg-zinc-900/40 hover:text-zinc-300
             border-none text-7xl  px-0 py-4 flex flex-col items-center 
-            justify-center w-28 h-fit focus:outline-none focus:bg-none
+            justify-center w-28 h-fit focus:outline-hidden focus:bg-none
             ease-in-out transition-all duration-300 transform hover:scale-110
           "
         >        

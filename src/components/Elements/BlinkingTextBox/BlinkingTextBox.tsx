@@ -9,7 +9,7 @@ interface BlinkingDotProps {
 
 const BlinkingTextBox = ({ className = "", onClick }: BlinkingDotProps) => {
   return (
-    <div className='animate-pulse transition-all duration-700 shadow-sm'>
+    <div className='animate-pulse transition-all duration-700 shadow-xs'>
       <div
         data-testid="text-box"
         aria-label="Clickable blinking text box"

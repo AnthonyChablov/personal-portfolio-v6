@@ -34,7 +34,7 @@ const GlitchText = ({ animationDuration = "2s" }: GlitchTextBannerProps) => {
     <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center" data-testid='glitch-cover'>
       {/* Background Glitch Animation */}
       <div
-        className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-pink-500 to-yellow-500 opacity-40 animate-pulse"
+        className="absolute top-0 left-0 w-full h-full bg-linear-to-r from-pink-500 to-yellow-500 opacity-40 animate-pulse"
         style={{
           animationDuration: animationDuration,
           animationIterationCount: "infinite",
