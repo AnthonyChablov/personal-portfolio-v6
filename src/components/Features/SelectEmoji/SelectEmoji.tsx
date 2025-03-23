@@ -69,7 +69,7 @@ const SelectEmoji = () => {
               {/* Shuffle Button */}
               <Button
                 onClick={selectRandomEmoji}
-                className="text-zinc-200 hover:bg-zinc-800 hover:text-zinc-300"
+                className="text-zinc-200 hover:bg-zinc-800 hover:text-zinc-300 hover:cursor-pointer"
               >
                 <svg
                   fill="currentColor"
