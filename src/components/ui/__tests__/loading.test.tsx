@@ -3,7 +3,7 @@ import { describe, it, expect } from "vitest";
 import Loading from "../loading";
 
 describe("loading.tsx", () => {
-  it("should render in the DOM with the correct header text", () => {
+  it("should render in the DOM.", () => {
     // Arrange
     // Act
     render(<Loading  />);
