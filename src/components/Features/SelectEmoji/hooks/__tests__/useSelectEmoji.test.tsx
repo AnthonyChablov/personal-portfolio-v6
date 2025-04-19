@@ -61,19 +61,19 @@ describe("useSelectEmoji", () => {
 
     // Act & Assert for different search terms
     act(() => {
-      result.current.setSearchTerm("cat");
+      result.current.setSearchTerm("tree");
     });
-    expect(result.current.filteredEmojis[0].emoji).toEqual("🐱");
+    expect(result.current.filteredEmojis[0].emoji).toEqual("🌲");
 
     act(() => {
-      result.current.setSearchTerm("dog");
+      result.current.setSearchTerm("leaf");
     });
-    expect(result.current.filteredEmojis[0].emoji).toEqual("🐶");
+    expect(result.current.filteredEmojis[0].emoji).toEqual("🍂");
 
     act(() => {
-      result.current.setSearchTerm("rocket");
+      result.current.setSearchTerm("hill");
     });
-    expect(result.current.filteredEmojis[0].emoji).toEqual("🚀");
+    expect(result.current.filteredEmojis[0].emoji).toEqual("⛰️");
   });
 
   it("should allow selecting an emoji", () => {
@@ -82,15 +82,15 @@ describe("useSelectEmoji", () => {
 
     // Act
     act(() => {
-      result.current.selectEmoji("🐶");
+      result.current.selectEmoji("🍂");
     });
 
     // Assert
-    expect(storedValue).toBe("🐶");
+    expect(storedValue).toBe("🍂");
 
     // Re-render the hook to check if the updated emoji is stored
     const { result: updatedResult } = renderHook(() => useSelectEmoji(mockInitialEmojis));
-    expect(updatedResult.current.selectedEmoji).toBe("🐶");
+    expect(updatedResult.current.selectedEmoji).toBe("🍂");
   });
 
   it("should return a different selected emoji when localStorage returns a different emoji", () => {
@@ -108,18 +108,18 @@ describe("useSelectEmoji", () => {
 
     // Act
     act(() => {
-      result.current.selectEmoji("🐶");
+      result.current.selectEmoji("🍂");
     });
 
     // Assert
-    expect(storedValue).toBe("🐶");
+    expect(storedValue).toBe("🍂");
 
     // Re-render the hook to see if it gets the updated value
     const { result: updatedResult } = renderHook(() =>
       useSelectEmoji(mockInitialEmojis, storedValue)
     );
 
-    expect(updatedResult.current.selectedEmoji).toBe("🐶");
+    expect(updatedResult.current.selectedEmoji).toBe("🍂");
   });
 
   it("should allow selecting a random emoji", () => {
